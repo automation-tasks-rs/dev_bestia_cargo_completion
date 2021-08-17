@@ -70,7 +70,7 @@ Run
 cargo install cargo-auto
 ```
 
-and then list the user-defined automation tasks with 
+and then list the user-defined automation tasks with
 
 ```bash
 cargo auto
