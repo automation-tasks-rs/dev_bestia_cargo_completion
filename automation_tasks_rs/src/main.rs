@@ -115,7 +115,7 @@ fn task_docs() {
     ];
     run_shell_commands(shell_commands.to_vec());
     // message to help user with next move
-    println!(r#"After `cargo auto doc`, check `docs/index.html`. if ok, then `git -a commit -m "message"` and `git push` changes,"#);
+    println!(r#"After `cargo auto doc`, check `docs/index.html`. If ok, then `git commit -a -m"message"` and `git push`,"#);
     println!("then `cargo auto publish_to_crates_io`");
 }
 
@@ -132,7 +132,7 @@ fn task_publish_to_crates_io() {
     run_shell_command("cargo publish");
     println!(r#"After `cargo auto task_publish_to_crates_io', check `crates.io` page."#);
     println!(r#"If binary then install with `cargo install crate_name` and check how it works."#);
-    println!(r#"If library then add dependency in your rust project and check how it works."#);
+    println!(r#"If library then add dependency to your rust project and check how it works."#);
 }
 
 // endregion: tasks
