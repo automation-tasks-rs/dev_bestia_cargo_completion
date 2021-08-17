@@ -56,25 +56,42 @@ fn print_help() {
     println!("");
 }
 
-/// sub-command for bash auto-completion using the crate `dev_bestia_cargo_completion`
+/// sub-command for bash auto-completion of `cargo auto` using the crate `dev_bestia_cargo_completion`
 fn completion() {
-    let args: Vec<String> = std::env::args().collect();
-    let word_being_completed = &args[2];
-    let sub_commands = vec!["build", "release", "doc", "publish_to_crates_io"];
-
-    let mut sub_found = false;
-    for sub_command in sub_commands.iter() {
-        if sub_command.starts_with(word_being_completed) {
-            println!("{}", sub_command);
-            sub_found = true;
-        }
-    }
-    if sub_found == false {
-        // list all sub-commands
+    /// println one, more or all sub_commands
+    fn completion_return_one_or_more_sub_commands(sub_commands: Vec<&str>, word_being_completed: &str) {
+        let mut sub_found = false;
         for sub_command in sub_commands.iter() {
-            println!("{}", sub_command);
+            if sub_command.starts_with(word_being_completed) {
+                println!("{}", sub_command);
+                sub_found = true;
+            }
+        }
+        if sub_found == false {
+            // print all sub-commands
+            for sub_command in sub_commands.iter() {
+                println!("{}", sub_command);
+            }
         }
     }
+
+    let args: Vec<String> = std::env::args().collect();
+    let last_word = args[2].as_str();
+    let mut word_being_completed = " ";
+    if args.len()>3{
+        word_being_completed = args[3].as_str();
+    }
+    if last_word=="cargo-auto" || last_word=="auto"{
+        let sub_commands = vec!["build", "release", "doc", "publish_to_crates_io"];
+        completion_return_one_or_more_sub_commands(sub_commands, word_being_completed);
+    } 
+    /*
+    // the second level if needed
+    else if last_word=="new"{
+        let sub_commands = vec!["with_lib"];
+        completion_return_one_or_more_sub_commands(sub_commands, word_being_completed);
+    }    
+    */
 }
 
 // region: tasks
@@ -107,7 +124,7 @@ fn task_docs() {
     auto_md_to_doc_comments();
     #[rustfmt::skip]
     let shell_commands = [
-        "cargo doc --no-deps --document-private-items",        
+        "cargo doc --no-deps --document-private-items --open",        
         // copy target/doc into docs/ because it is github standard
         "rsync -a --info=progress2 --delete-after target/doc/ docs/",
         "echo Create simple index.html file in docs directory",
