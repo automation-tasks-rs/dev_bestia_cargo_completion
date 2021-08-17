@@ -4,17 +4,17 @@
 
 [comment]: # (auto_cargo_toml_to_md start)
 
-**dev_bestia_cargo_completion - experimental auto_completion for cargo and cargo-auto in bash**  
-***[repository](https://github.com/LucianoBestia/dev_bestia_cargo_completion); version: 2021.817.1148  date: 2021-08-17 authors: Luciano Bestia***  
+**dev_bestia_cargo_completion - experimental auto-completion for cargo and cargo-auto in bash**  
+***[repository](https://github.com/LucianoBestia/dev_bestia_cargo_completion); version: 2021.817.1221  date: 2021-08-17 authors: Luciano Bestia***  
 
 [comment]: # (auto_cargo_toml_to_md end)
 
 [comment]: # (auto_lines_of_code start)
-[![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-50-green.svg)]()
-[![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-65-blue.svg)]()
-[![Lines in Comments](https://img.shields.io/badge/Lines_in_comments-18-purple.svg)]()
-[![Lines in examples](https://img.shields.io/badge/Lines_in_examples-0-yellow.svg)]()
-[![Lines in tests](https://img.shields.io/badge/Lines_in_tests-0-orange.svg)]()
+[![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-50-green.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)
+[![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-65-blue.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)
+[![Lines in Comments](https://img.shields.io/badge/Lines_in_comments-18-purple.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)
+[![Lines in examples](https://img.shields.io/badge/Lines_in_examples-0-yellow.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)
+[![Lines in tests](https://img.shields.io/badge/Lines_in_tests-0-orange.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)
 
 [comment]: # (auto_lines_of_code end)
 
@@ -50,6 +50,7 @@ This is a great blog:
 ## complete, the Linux command
 
 The Linux command `complete` adds auto_completion definitions to bash.  
+But it is only for the current session. If you want to make it persistent add it to you `~/.bashrc` file. Or to some other file that runs commands on initialization of the bash.  
 
 ```bash
 # list the definitions
@@ -75,7 +76,7 @@ and then list the user-defined automation tasks with
 cargo auto
 ```  
 
-You can save the definition for bash auto-completion for this project in development. So you can test the auto-completion while developing it.
+You can change the definition for bash auto-completion to point to the compilation of this project in development. So you can easy test the auto-completion while developing it.
 
 ```bash
 complete -C "/home/luciano/rustprojects/dev_bestia_cargo_completion/target/debug/dev_bestia_cargo_completion" cargo

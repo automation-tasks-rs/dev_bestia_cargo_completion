@@ -1,51 +1,79 @@
 // region: auto_md_to_doc_comments include README.md A //!
 //! # dev_bestia_cargo_completion  
 //!
-//! **dev_bestia_cargo_completion - automation tasks written in Rust language for the build process of rust projects**  
-//! ***[repository](https://github.com/LucianoBestia/dev_bestia_cargo_completion); version: 2021.816.1738  date: 2021-08-16 authors: Luciano Bestia***  
+//! **dev_bestia_cargo_completion - experimental auto-completion for cargo and cargo-auto in bash**  
+//! ***[repository](https://github.com/LucianoBestia/dev_bestia_cargo_completion); version: 2021.817.1221  date: 2021-08-17 authors: Luciano Bestia***  
 //!
-//! [![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-424-green.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)
-//! [![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-267-blue.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)
-//! [![Lines in Comments](https://img.shields.io/badge/Lines_in_comments-47-purple.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)
+//! [![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-50-green.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)
+//! [![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-65-blue.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)
+//! [![Lines in Comments](https://img.shields.io/badge/Lines_in_comments-18-purple.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)
 //! [![Lines in examples](https://img.shields.io/badge/Lines_in_examples-0-yellow.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)
 //! [![Lines in tests](https://img.shields.io/badge/Lines_in_tests-0-orange.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)
 //!
 //! [![crates.io](https://img.shields.io/crates/v/dev_bestia_cargo_completion.svg)](https://crates.io/crates/dev_bestia_cargo_completion) [![Documentation](https://docs.rs/dev_bestia_cargo_completion/badge.svg)](https://docs.rs/dev_bestia_cargo_completion/) [![crev reviews](https://web.crev.dev/rust-reviews/badge/crev_count/dev_bestia_cargo_completion.svg)](https://web.crev.dev/rust-reviews/crate/dev_bestia_cargo_completion/) [![Lib.rs](https://img.shields.io/badge/Lib.rs-rust-orange.svg)](https://lib.rs/crates/dev_bestia_cargo_completion/) [![Licence](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/blob/master/LICENSE) [![Rust](https://github.com/LucianoBestia/dev_bestia_cargo_completion/workflows/RustAction/badge.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)  
 //!
-//! ## bash auto completion
+//! ## Try it
 //!
-//! Auto-completion in Debian bash is a great tool. You type the first letters, press tab and the command is auto-completed.  
-//! Bash can call an executable binary to return the available words. So it can be written in Rust. This can produce even better results as `dynamic auto-completion`.  
-//! For my knowledge `cargo` does not have auto-completion yet. There are many plans. It can take some time.  
-//! I will build what I need now. Something simple. It doesn't need to be perfect.  
-//! This is a great bog:  
-//! <https://www.joshmcguigan.com/blog/shell-completions-pure-rust/>
-//!
-//! This command will save the auto-completion definition into bash:
+//! Install the binary:
 //!
 //! ```bash
-//! complete -C "/home/luciano/rustprojects/dev_bestia_cargo_completion/target/debug/dev_bestia_cargo_completion" cargo
+//! cargo install dev_bestia_cargo_completion
 //! ```
 //!
-//! Then try it, type `cargo` and mandatory `space` and then press `tab tab`.  
-//! Something should happen.  
-//!
-//! ## complete
-//!
-//! The Linux command complete adds auto_completion definitions to bash.  
+//! Save definition for auto_completion in bash:
 //!
 //! ```bash
-//! # to list the definitions
+//! complete -C "dev_bestia_cargo_completion" cargo
+//! ```
+//!
+//! Start typing `cargo b` and press `tab`.  
+//! It should auto-complete to `cargo build`.  
+//! Congratulation! You just used auto-completion :-)  
+//!
+//! ## bash auto completion
+//!
+//! Auto-completion in Debian bash is a great tool. You type the first letters, press tab and the word is auto-completed.  
+//! Bash can call an executable binary to return the available words. So it can be written in Rust. This can produce even better results as known as `dynamic auto-completion`.  
+//! For my knowledge `cargo` does not have auto-completion yet. There are many plans. It can take some time.  
+//! I will build what I need now. Something simple. It doesn't need to be perfect.  
+//! This is a great blog:  
+//! <https://www.joshmcguigan.com/blog/shell-completions-pure-rust/>
+//!
+//! ## complete, the Linux command
+//!
+//! The Linux command `complete` adds auto_completion definitions to bash.  
+//! But it is only for the current session. If you want to make it persistent add it to you `~/.bashrc` file. Or to some other file that runs commands on initialization of the bash.  
+//!
+//! ```bash
+//! # list the definitions
 //! complete
-//! # to delete a definition
+//! # delete a definition
 //! complete -r cargo
-//! # define binary to auto-complete the command
+//! # define a binary to auto-complete the command
 //! complete -C "binary" command
 //! ```
 //!
 //! ## development
 //!
-//! Install `cargo install cargo-auto` and then list the user-defined automation tasks with `cargo auto`.  
+//! I choose this long name for my crate, because cargo-completion is a hot topic. Sooner or later someone will build it - officially. This is why I added the prefix `dev_bestia_`, because my web domain is [bestia.dev](https:://bestia.dev). This way I have the guarantee of a unique name and leave the short name to the future official version.  
+//! Run
+//!
+//! ```bash
+//! cargo install cargo-auto
+//! ```
+//!
+//! and then list the user-defined automation tasks with 
+//!
+//! ```bash
+//! cargo auto
+//! ```  
+//!
+//! You can change the definition for bash auto-completion to point to the compilation of this project in development. So you can easy test the auto-completion while developing it.
+//!
+//! ```bash
+//! complete -C "/home/luciano/rustprojects/dev_bestia_cargo_completion/target/debug/dev_bestia_cargo_completion" cargo
+//! ```
+//!
 //!
 //! ## cargo crev reviews and advisory
 //!
