@@ -1,0 +1,23 @@
+[package]
+name = "dev_bestia_cargo_completion"
+version = "2021.817.1148"
+authors = ["Luciano Bestia <luciano.bestia@gmail.com>"]
+edition = "2018"
+description = "dev_bestia_cargo_completion - experimental auto-completion for cargo and cargo-auto in bash"
+repository = "https://github.com/LucianoBestia/dev_bestia_cargo_completion"
+readme = "README.md"
+license = "MIT"
+keywords = ["rust", "make"]
+categories = ["development-tools::build-utils"]
+# publish as a cargo tool. Only this files.
+publish = true
+include = [
+    "Cargo.toml",
+    "LICENSE",
+    "README.md",
+    "src/*"
+]
+
+[dependencies]
+unwrap = "1.2.1"
+lazy_static="1.4.0"

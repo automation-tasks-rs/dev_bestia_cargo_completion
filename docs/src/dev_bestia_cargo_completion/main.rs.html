@@ -1,0 +1,271 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src/main.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>main.rs - source</title><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../light.css"  id="themeStyle"><link rel="stylesheet" type="text/css" href="../../dark.css" disabled ><link rel="stylesheet" type="text/css" href="../../ayu.css" disabled ><script id="default-settings"></script><script src="../../storage.js"></script><script src="../../crates.js"></script><noscript><link rel="stylesheet" href="../../noscript.css"></noscript><link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+<link rel="alternate icon" type="image/png" href="../../favicon-16x16.png">
+<link rel="alternate icon" type="image/png" href="../../favicon-32x32.png"><style type="text/css">#crate-search{background-image:url("../../down-arrow.svg");}</style></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu" role="button">&#9776;</div><a href='../../dev_bestia_cargo_completion/index.html'><div class='logo-container rust-logo'><img src='../../rust-logo.png' alt='logo'></div></a></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu" title="themes"><img src="../../brush.svg" width="18" height="18" alt="Pick another theme!"></button><div id="theme-choices" role="menu"></div></div><nav class="sub"><form class="search-form"><div class="search-container"><div><select id="crate-search"><option value="All crates">All crates</option></select><input class="search-input" name="search" disabled autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><button type="button" id="help-button" title="help">?</button><a id="settings-menu" href="../../settings.html" title="settings"><img src="../../wheel.svg" width="18" height="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">  1</span>
+<span id="2">  2</span>
+<span id="3">  3</span>
+<span id="4">  4</span>
+<span id="5">  5</span>
+<span id="6">  6</span>
+<span id="7">  7</span>
+<span id="8">  8</span>
+<span id="9">  9</span>
+<span id="10"> 10</span>
+<span id="11"> 11</span>
+<span id="12"> 12</span>
+<span id="13"> 13</span>
+<span id="14"> 14</span>
+<span id="15"> 15</span>
+<span id="16"> 16</span>
+<span id="17"> 17</span>
+<span id="18"> 18</span>
+<span id="19"> 19</span>
+<span id="20"> 20</span>
+<span id="21"> 21</span>
+<span id="22"> 22</span>
+<span id="23"> 23</span>
+<span id="24"> 24</span>
+<span id="25"> 25</span>
+<span id="26"> 26</span>
+<span id="27"> 27</span>
+<span id="28"> 28</span>
+<span id="29"> 29</span>
+<span id="30"> 30</span>
+<span id="31"> 31</span>
+<span id="32"> 32</span>
+<span id="33"> 33</span>
+<span id="34"> 34</span>
+<span id="35"> 35</span>
+<span id="36"> 36</span>
+<span id="37"> 37</span>
+<span id="38"> 38</span>
+<span id="39"> 39</span>
+<span id="40"> 40</span>
+<span id="41"> 41</span>
+<span id="42"> 42</span>
+<span id="43"> 43</span>
+<span id="44"> 44</span>
+<span id="45"> 45</span>
+<span id="46"> 46</span>
+<span id="47"> 47</span>
+<span id="48"> 48</span>
+<span id="49"> 49</span>
+<span id="50"> 50</span>
+<span id="51"> 51</span>
+<span id="52"> 52</span>
+<span id="53"> 53</span>
+<span id="54"> 54</span>
+<span id="55"> 55</span>
+<span id="56"> 56</span>
+<span id="57"> 57</span>
+<span id="58"> 58</span>
+<span id="59"> 59</span>
+<span id="60"> 60</span>
+<span id="61"> 61</span>
+<span id="62"> 62</span>
+<span id="63"> 63</span>
+<span id="64"> 64</span>
+<span id="65"> 65</span>
+<span id="66"> 66</span>
+<span id="67"> 67</span>
+<span id="68"> 68</span>
+<span id="69"> 69</span>
+<span id="70"> 70</span>
+<span id="71"> 71</span>
+<span id="72"> 72</span>
+<span id="73"> 73</span>
+<span id="74"> 74</span>
+<span id="75"> 75</span>
+<span id="76"> 76</span>
+<span id="77"> 77</span>
+<span id="78"> 78</span>
+<span id="79"> 79</span>
+<span id="80"> 80</span>
+<span id="81"> 81</span>
+<span id="82"> 82</span>
+<span id="83"> 83</span>
+<span id="84"> 84</span>
+<span id="85"> 85</span>
+<span id="86"> 86</span>
+<span id="87"> 87</span>
+<span id="88"> 88</span>
+<span id="89"> 89</span>
+<span id="90"> 90</span>
+<span id="91"> 91</span>
+<span id="92"> 92</span>
+<span id="93"> 93</span>
+<span id="94"> 94</span>
+<span id="95"> 95</span>
+<span id="96"> 96</span>
+<span id="97"> 97</span>
+<span id="98"> 98</span>
+<span id="99"> 99</span>
+<span id="100">100</span>
+<span id="101">101</span>
+<span id="102">102</span>
+<span id="103">103</span>
+<span id="104">104</span>
+<span id="105">105</span>
+<span id="106">106</span>
+<span id="107">107</span>
+<span id="108">108</span>
+<span id="109">109</span>
+<span id="110">110</span>
+<span id="111">111</span>
+<span id="112">112</span>
+<span id="113">113</span>
+<span id="114">114</span>
+<span id="115">115</span>
+<span id="116">116</span>
+<span id="117">117</span>
+<span id="118">118</span>
+<span id="119">119</span>
+<span id="120">120</span>
+<span id="121">121</span>
+<span id="122">122</span>
+<span id="123">123</span>
+<span id="124">124</span>
+<span id="125">125</span>
+<span id="126">126</span>
+<span id="127">127</span>
+<span id="128">128</span>
+<span id="129">129</span>
+<span id="130">130</span>
+<span id="131">131</span>
+<span id="132">132</span>
+<span id="133">133</span>
+</pre><pre class="rust">
+<span class="comment">// region: auto_md_to_doc_comments include README.md A //!</span>
+<span class="doccomment">//! # dev_bestia_cargo_completion  </span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! **dev_bestia_cargo_completion - automation tasks written in Rust language for the build process of rust projects**  </span>
+<span class="doccomment">//! ***[repository](https://github.com/LucianoBestia/dev_bestia_cargo_completion); version: 2021.816.1738  date: 2021-08-16 authors: Luciano Bestia***  </span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! [![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-424-green.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)</span>
+<span class="doccomment">//! [![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-267-blue.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)</span>
+<span class="doccomment">//! [![Lines in Comments](https://img.shields.io/badge/Lines_in_comments-47-purple.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)</span>
+<span class="doccomment">//! [![Lines in examples](https://img.shields.io/badge/Lines_in_examples-0-yellow.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)</span>
+<span class="doccomment">//! [![Lines in tests](https://img.shields.io/badge/Lines_in_tests-0-orange.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! [![crates.io](https://img.shields.io/crates/v/dev_bestia_cargo_completion.svg)](https://crates.io/crates/dev_bestia_cargo_completion) [![Documentation](https://docs.rs/dev_bestia_cargo_completion/badge.svg)](https://docs.rs/dev_bestia_cargo_completion/) [![crev reviews](https://web.crev.dev/rust-reviews/badge/crev_count/dev_bestia_cargo_completion.svg)](https://web.crev.dev/rust-reviews/crate/dev_bestia_cargo_completion/) [![Lib.rs](https://img.shields.io/badge/Lib.rs-rust-orange.svg)](https://lib.rs/crates/dev_bestia_cargo_completion/) [![Licence](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/blob/master/LICENSE) [![Rust](https://github.com/LucianoBestia/dev_bestia_cargo_completion/workflows/RustAction/badge.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)  </span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! ## bash auto completion</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! Auto-completion in Debian bash is a great tool. You type the first letters, press tab and the command is auto-completed.  </span>
+<span class="doccomment">//! Bash can call an executable binary to return the available words. So it can be written in Rust. This can produce even better results as `dynamic auto-completion`.  </span>
+<span class="doccomment">//! For my knowledge `cargo` does not have auto-completion yet. There are many plans. It can take some time.  </span>
+<span class="doccomment">//! I will build what I need now. Something simple. It doesn&#39;t need to be perfect.  </span>
+<span class="doccomment">//! This is a great bog:  </span>
+<span class="doccomment">//! &lt;https://www.joshmcguigan.com/blog/shell-completions-pure-rust/&gt;</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! This command will save the auto-completion definition into bash:</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! ```bash</span>
+<span class="doccomment">//! complete -C &quot;/home/luciano/rustprojects/dev_bestia_cargo_completion/target/debug/dev_bestia_cargo_completion&quot; cargo</span>
+<span class="doccomment">//! ```</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! Then try it, type `cargo` and mandatory `space` and then press `tab tab`.  </span>
+<span class="doccomment">//! Something should happen.  </span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! ## complete</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! The Linux command complete adds auto_completion definitions to bash.  </span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! ```bash</span>
+<span class="doccomment">//! # to list the definitions</span>
+<span class="doccomment">//! complete</span>
+<span class="doccomment">//! # to delete a definition</span>
+<span class="doccomment">//! complete -r cargo</span>
+<span class="doccomment">//! # define binary to auto-complete the command</span>
+<span class="doccomment">//! complete -C &quot;binary&quot; command</span>
+<span class="doccomment">//! ```</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! ## development</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! Install `cargo install cargo-auto` and then list the user-defined automation tasks with `cargo auto`.  </span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! ## cargo crev reviews and advisory</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! We leave in times of danger with `supply chain attacks`.  </span>
+<span class="doccomment">//! It is recommended to always use [cargo-crev](https://github.com/crev-dev/cargo-crev)  </span>
+<span class="doccomment">//! to verify the trustworthiness of each of your dependencies.  </span>
+<span class="doccomment">//! Please, spread this info.  </span>
+<span class="doccomment">//! You can also read reviews quickly on the web. Example for the crate `num-traits`:  </span>
+<span class="doccomment">//! &lt;https://web.crev.dev/rust-reviews/crate/num-traits/&gt;  </span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! ## open-source free and free as a beer</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! My open-source projects are free and free as a beer (MIT license).  </span>
+<span class="doccomment">//! I just love programming.  </span>
+<span class="doccomment">//! But I need also to drink. If you find my projects and tutorials helpful, please buy me a beer or two donating on my [paypal](https://www.paypal.com/paypalme/LucianoBestia). You know the price of a beer in your local bar ;-)  </span>
+<span class="doccomment">//! So I can drink a free beer for your health :-)  </span>
+<span class="doccomment">//! [Na zdravje](https://translate.google.com/?hl=en&amp;sl=sl&amp;tl=en&amp;text=Na%20zdravje&amp;op=translate) !</span>
+<span class="doccomment">//!</span>
+<span class="comment">// endregion: auto_md_to_doc_comments include README.md A //!</span>
+
+<span class="comment">// region: use statements</span>
+<span class="comment">// use lazy_static::lazy_static;</span>
+<span class="kw">use</span> <span class="ident">std</span>::{<span class="ident">env</span>, <span class="ident">path::Path</span>, <span class="ident">vec</span>};
+<span class="kw">use</span> <span class="ident">unwrap::unwrap</span>;
+<span class="comment">// endregion</span>
+
+<span class="kw">fn</span> <span class="ident">main</span>() {
+    <span class="comment">// region: Environment Variables</span>
+    <span class="comment">// COMP_LINE - the full text that the user has entered</span>
+    <span class="comment">// COMP_POINT - the cursor position (a numeric index into COMP_LINE)¸</span>
+    <span class="kw">let</span> <span class="ident">comp_line</span> <span class="op">=</span> <span class="macro">unwrap!</span>(<span class="ident">env::var</span>(<span class="string">&quot;COMP_LINE&quot;</span>));
+    <span class="kw">let</span> <span class="ident">_comp_point</span> <span class="op">=</span> <span class="macro">unwrap!</span>(<span class="macro">unwrap!</span>(<span class="ident">env::var</span>(<span class="string">&quot;COMP_POINT&quot;</span>)).<span class="ident">parse</span>::<span class="op">&lt;</span><span class="ident">usize</span><span class="op">&gt;</span>());
+    <span class="kw">let</span> <span class="ident">vec_comp_line</span>: <span class="ident">Vec</span><span class="op">&lt;</span><span class="kw-2">&amp;</span><span class="ident">str</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">comp_line</span>.<span class="ident">split_whitespace</span>().<span class="ident">collect</span>();
+    <span class="comment">// endregion: Environment Variable</span>
+
+    <span class="comment">// region: CLI arguments</span>
+    <span class="kw">let</span> <span class="ident">args</span>: <span class="ident">Vec</span><span class="op">&lt;</span><span class="ident">String</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">env::args</span>().<span class="ident">collect</span>();
+    <span class="comment">// args[2] - the word we are completing</span>
+    <span class="kw">let</span> <span class="ident">word_being_completed</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="ident">args</span>[<span class="number">2</span>];
+    <span class="comment">// args[3] - the last word before that</span>
+    <span class="kw">let</span> <span class="ident">last_word</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="ident">args</span>[<span class="number">3</span>];
+    <span class="comment">// endregion: CLI arguments</span>
+
+    <span class="comment">// first word after `cargo`</span>
+    <span class="kw">if</span> <span class="ident">vec_comp_line</span>.<span class="ident">len</span>() <span class="op">&lt;</span><span class="op">=</span> <span class="number">2</span> <span class="op">&amp;&amp;</span> <span class="ident">last_word</span> <span class="op">=</span><span class="op">=</span> <span class="string">&quot;cargo&quot;</span> {
+        <span class="kw">let</span> <span class="ident">sub_commands_after_cargo</span> <span class="op">=</span> <span class="macro">vec!</span>[<span class="string">&quot;auto&quot;</span>, <span class="string">&quot;build&quot;</span>, <span class="string">&quot;check&quot;</span>, <span class="string">&quot;new&quot;</span>, <span class="string">&quot;doc&quot;</span>, <span class="string">&quot;test&quot;</span>, <span class="string">&quot;fmt&quot;</span>];
+        <span class="kw">for</span> <span class="ident">sub_command</span> <span class="kw">in</span> <span class="ident">sub_commands_after_cargo</span> {
+            <span class="comment">// list all for `tab tab` or list only one starting with the word</span>
+            <span class="kw">if</span> <span class="ident">vec_comp_line</span>.<span class="ident">len</span>() <span class="op">=</span><span class="op">=</span> <span class="number">1</span> <span class="op">|</span><span class="op">|</span> <span class="ident">sub_command</span>.<span class="ident">starts_with</span>(<span class="ident">word_being_completed</span>) {
+                <span class="macro">println!</span>(<span class="string">&quot;{}&quot;</span>, <span class="ident">sub_command</span>);
+            }
+        }
+    }
+    <span class="comment">// the first word after `cargo build`</span>
+    <span class="kw">else</span> <span class="kw">if</span> <span class="ident">vec_comp_line</span>.<span class="ident">len</span>() <span class="op">&lt;</span><span class="op">=</span> <span class="number">3</span>
+        <span class="op">&amp;&amp;</span> <span class="ident">last_word</span> <span class="op">=</span><span class="op">=</span> <span class="string">&quot;build&quot;</span>
+        <span class="op">&amp;&amp;</span> <span class="ident">comp_line</span>.<span class="ident">starts_with</span>(<span class="string">&quot;cargo build&quot;</span>)
+    {
+        <span class="kw">let</span> <span class="ident">sub_commands</span> <span class="op">=</span> <span class="macro">vec!</span>[<span class="string">&quot;--release&quot;</span>];
+
+        <span class="kw">for</span> <span class="ident">sub_command</span> <span class="kw">in</span> <span class="ident">sub_commands</span> {
+            <span class="comment">// list all for `tab tab` or list only one starting with the word</span>
+            <span class="kw">if</span> <span class="ident">vec_comp_line</span>.<span class="ident">len</span>() <span class="op">=</span><span class="op">=</span> <span class="number">2</span> <span class="op">|</span><span class="op">|</span> <span class="ident">sub_command</span>.<span class="ident">starts_with</span>(<span class="ident">word_being_completed</span>) {
+                <span class="macro">println!</span>(<span class="string">&quot;{}&quot;</span>, <span class="ident">sub_command</span>);
+            }
+        }
+    }
+    <span class="comment">// the first word after `cargo auto`</span>
+    <span class="kw">else</span> <span class="kw">if</span> <span class="ident">vec_comp_line</span>.<span class="ident">len</span>() <span class="op">&lt;</span><span class="op">=</span> <span class="number">3</span> <span class="op">&amp;&amp;</span> <span class="ident">last_word</span> <span class="op">=</span><span class="op">=</span> <span class="string">&quot;auto&quot;</span> <span class="op">&amp;&amp;</span> <span class="ident">comp_line</span>.<span class="ident">starts_with</span>(<span class="string">&quot;cargo auto&quot;</span>)
+    {
+        <span class="kw">let</span> <span class="ident">path_to_automation</span> <span class="op">=</span> <span class="string">&quot;automation_tasks_rs/target/debug/automation_tasks_rs&quot;</span>;
+        <span class="kw">if</span> <span class="ident">Path::new</span>(<span class="ident">path_to_automation</span>).<span class="ident">exists</span>() {
+            <span class="ident">std::process::Command::new</span>(<span class="ident">path_to_automation</span>)
+                .<span class="ident">arg</span>(<span class="string">&quot;completion&quot;</span>)
+                .<span class="ident">arg</span>(<span class="ident">word_being_completed</span>)
+                .<span class="ident">spawn</span>()
+                .<span class="ident">unwrap</span>()
+                .<span class="ident">wait</span>()
+                .<span class="ident">unwrap</span>();
+        } <span class="kw">else</span> {
+            <span class="macro">println!</span>(<span class="string">&quot;new&quot;</span>);
+            <span class="macro">println!</span>(<span class="string">&quot;new_with_lib&quot;</span>);
+        }
+    }
+}
+</pre></div>
+</section><section id="search" class="content hidden"></section><div id="rustdoc-vars" data-root-path="../../" data-current-crate="dev_bestia_cargo_completion" data-search-index-js="../../search-index.js" data-search-js="../../search.js"></div><script src="../../main.js"></script><script src="../../source-script.js"></script><script src="../../source-files.js"></script></body></html>

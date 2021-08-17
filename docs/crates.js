@@ -1,0 +1,1 @@
+window.ALL_CRATES = ["dev_bestia_cargo_completion"];
