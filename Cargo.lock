@@ -4,7 +4,7 @@ version = 3
 
 [[package]]
 name = "dev_bestia_cargo_completion"
-version = "2021.817.1711"
+version = "2021.817.1749"
 dependencies = [
  "lazy_static",
  "unwrap",

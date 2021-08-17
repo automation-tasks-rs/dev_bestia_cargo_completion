@@ -1,9 +1,9 @@
 [package]
 name = "dev_bestia_cargo_completion"
-version = "2021.817.1711"
+version = "2021.817.1749"
 authors = ["Luciano Bestia <luciano.bestia@gmail.com>"]
 edition = "2018"
-description = "dev_bestia_cargo_completion - experimental auto-completion for cargo and cargo-auto in bash"
+description = "Full auto-completion for cargo-auto and automation_tasks_rs and partial auto-completion for cargo  in bash"
 repository = "https://github.com/LucianoBestia/dev_bestia_cargo_completion"
 readme = "README.md"
 license = "MIT"

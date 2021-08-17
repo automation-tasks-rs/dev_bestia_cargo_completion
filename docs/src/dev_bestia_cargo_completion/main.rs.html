@@ -167,16 +167,18 @@
 <span id="165">165</span>
 <span id="166">166</span>
 <span id="167">167</span>
+<span id="168">168</span>
+<span id="169">169</span>
 </pre><pre class="rust">
 <span class="comment">// region: auto_md_to_doc_comments include README.md A //!</span>
 <span class="doccomment">//! # dev_bestia_cargo_completion  </span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//! **dev_bestia_cargo_completion - experimental auto-completion for cargo and cargo-auto in bash**  </span>
-<span class="doccomment">//! ***[repository](https://github.com/LucianoBestia/dev_bestia_cargo_completion); version: 2021.817.1711  date: 2021-08-17 authors: Luciano Bestia***  </span>
+<span class="doccomment">//! **Full auto-completion for cargo-auto and automation_tasks_rs and partial auto-completion for cargo  in bash**  </span>
+<span class="doccomment">//! ***[repository](https://github.com/LucianoBestia/dev_bestia_cargo_completion); version: 2021.817.1749  date: 2021-08-17 authors: Luciano Bestia***  </span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//! [![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-57-green.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)</span>
+<span class="doccomment">//! [![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-55-green.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)</span>
 <span class="doccomment">//! [![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-93-blue.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)</span>
-<span class="doccomment">//! [![Lines in Comments](https://img.shields.io/badge/Lines_in_comments-18-purple.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)</span>
+<span class="doccomment">//! [![Lines in Comments](https://img.shields.io/badge/Lines_in_comments-21-purple.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)</span>
 <span class="doccomment">//! [![Lines in examples](https://img.shields.io/badge/Lines_in_examples-0-yellow.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)</span>
 <span class="doccomment">//! [![Lines in tests](https://img.shields.io/badge/Lines_in_tests-0-orange.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)</span>
 <span class="doccomment">//!</span>
@@ -310,15 +312,17 @@
                 <span class="macro">println!</span>(<span class="string">&quot;{}&quot;</span>, <span class="ident">sub_command</span>);
             }
         }
-    }
-    <span class="comment">// words after `cargo auto` call the appropriate binary, that responds with println</span>
-    <span class="kw">else</span> <span class="kw">if</span> <span class="ident">comp_line</span>.<span class="ident">starts_with</span>(<span class="string">&quot;cargo auto&quot;</span>) {
+    } <span class="kw">else</span> <span class="kw">if</span> <span class="ident">comp_line</span>.<span class="ident">starts_with</span>(<span class="string">&quot;cargo auto&quot;</span>) {
+        <span class="comment">// words after `cargo auto` execute the appropriate binary, that responds with println</span>
+        <span class="comment">// 1st argument in &quot;completion&quot;</span>
+        <span class="comment">// 2nd argument is the `last_word`</span>
+        <span class="comment">// 3rd argument is the `word_being_completed`</span>
         <span class="kw">let</span> <span class="ident">path_to_automation</span> <span class="op">=</span> <span class="string">&quot;automation_tasks_rs/target/debug/automation_tasks_rs&quot;</span>;
         <span class="kw">if</span> <span class="ident">Path::new</span>(<span class="ident">path_to_automation</span>).<span class="ident">exists</span>() {
             <span class="ident">std::process::Command::new</span>(<span class="ident">path_to_automation</span>)
                 .<span class="ident">arg</span>(<span class="string">&quot;completion&quot;</span>)
-                .<span class="ident">arg</span>(<span class="ident">word_being_completed</span>)
                 .<span class="ident">arg</span>(<span class="ident">last_word</span>)
+                .<span class="ident">arg</span>(<span class="ident">word_being_completed</span>)
                 .<span class="ident">spawn</span>()
                 .<span class="ident">unwrap</span>()
                 .<span class="ident">wait</span>()
@@ -326,8 +330,8 @@
         } <span class="kw">else</span> {
             <span class="ident">std::process::Command::new</span>(<span class="string">&quot;cargo-auto&quot;</span>)
                 .<span class="ident">arg</span>(<span class="string">&quot;completion&quot;</span>)
-                .<span class="ident">arg</span>(<span class="ident">word_being_completed</span>)
                 .<span class="ident">arg</span>(<span class="ident">last_word</span>)
+                .<span class="ident">arg</span>(<span class="ident">word_being_completed</span>)
                 .<span class="ident">spawn</span>()
                 .<span class="ident">unwrap</span>()
                 .<span class="ident">wait</span>()

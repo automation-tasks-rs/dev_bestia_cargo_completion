@@ -86,6 +86,7 @@ fn task_build() {
         "cargo fmt", 
         "cargo build"];
     run_shell_commands(shell_commands.to_vec());
+    println!("After `cargo auto build`, run the tests and the code. If ok, then `cargo auto release`");
 }
 
 /// example how to call one shell command and combine with rust code
@@ -98,6 +99,7 @@ fn task_release() {
     run_shell_command("cargo fmt");
     println!("$ cargo build --release");
     run_shell_command("cargo build --release");
+    println!("After `cargo auto release`, run the tests and the code. If ok, then `cargo auto doc`");
 }
 
 /// example how to call a list of shell commands and combine with rust code
@@ -105,7 +107,7 @@ fn task_docs() {
     auto_md_to_doc_comments();
     #[rustfmt::skip]
     let shell_commands = [
-        "cargo doc --no-deps --document-private-items --open",        
+        "cargo doc --no-deps --document-private-items",        
         // copy target/doc into docs/ because it is github standard
         "rsync -a --info=progress2 --delete-after target/doc/ docs/",
         "echo Create simple index.html file in docs directory",
@@ -113,7 +115,8 @@ fn task_docs() {
     ];
     run_shell_commands(shell_commands.to_vec());
     // message to help user with next move
-    println!("After successful doc, commit and push changes");
+    println!(r#"After `cargo auto doc`, check `docs/index.html`. if ok, then `git -a commit -m "message"` and `git push` changes,"#);
+    println!("then `cargo auto publish_to_crates_io`");
 }
 
 /// example hot to publish to crates.io and git tag
@@ -127,6 +130,9 @@ fn task_publish_to_crates_io() {
 
     // cargo publish
     run_shell_command("cargo publish");
+    println!(r#"After `cargo auto task_publish_to_crates_io', check `crates.io` page."#);
+    println!(r#"If binary then install with `cargo install crate_name` and check how it works."#);
+    println!(r#"If library then add dependency in your rust project and check how it works."#);
 }
 
 // endregion: tasks

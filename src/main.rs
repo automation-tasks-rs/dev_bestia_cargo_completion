@@ -1,12 +1,12 @@
 // region: auto_md_to_doc_comments include README.md A //!
 //! # dev_bestia_cargo_completion  
 //!
-//! **dev_bestia_cargo_completion - experimental auto-completion for cargo and cargo-auto in bash**  
-//! ***[repository](https://github.com/LucianoBestia/dev_bestia_cargo_completion); version: 2021.817.1711  date: 2021-08-17 authors: Luciano Bestia***  
+//! **Full auto-completion for cargo-auto and automation_tasks_rs and partial auto-completion for cargo  in bash**  
+//! ***[repository](https://github.com/LucianoBestia/dev_bestia_cargo_completion); version: 2021.817.1749  date: 2021-08-17 authors: Luciano Bestia***  
 //!
-//! [![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-57-green.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)
+//! [![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-55-green.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)
 //! [![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-93-blue.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)
-//! [![Lines in Comments](https://img.shields.io/badge/Lines_in_comments-18-purple.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)
+//! [![Lines in Comments](https://img.shields.io/badge/Lines_in_comments-21-purple.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)
 //! [![Lines in examples](https://img.shields.io/badge/Lines_in_examples-0-yellow.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)
 //! [![Lines in tests](https://img.shields.io/badge/Lines_in_tests-0-orange.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)
 //!
@@ -140,15 +140,17 @@ fn main() {
                 println!("{}", sub_command);
             }
         }
-    }
-    // words after `cargo auto` call the appropriate binary, that responds with println
-    else if comp_line.starts_with("cargo auto") {
+    } else if comp_line.starts_with("cargo auto") {
+        // words after `cargo auto` execute the appropriate binary, that responds with println
+        // 1st argument in "completion"
+        // 2nd argument is the `last_word`
+        // 3rd argument is the `word_being_completed`
         let path_to_automation = "automation_tasks_rs/target/debug/automation_tasks_rs";
         if Path::new(path_to_automation).exists() {
             std::process::Command::new(path_to_automation)
                 .arg("completion")
-                .arg(word_being_completed)
                 .arg(last_word)
+                .arg(word_being_completed)
                 .spawn()
                 .unwrap()
                 .wait()
@@ -156,8 +158,8 @@ fn main() {
         } else {
             std::process::Command::new("cargo-auto")
                 .arg("completion")
-                .arg(word_being_completed)
                 .arg(last_word)
+                .arg(word_being_completed)
                 .spawn()
                 .unwrap()
                 .wait()
