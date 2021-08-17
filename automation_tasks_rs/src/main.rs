@@ -115,7 +115,7 @@ fn task_docs() {
     ];
     run_shell_commands(shell_commands.to_vec());
     // message to help user with next move
-    println!(r#"After `cargo auto doc`, check `docs/index.html`. If ok, then `git commit -a -m"message"` and `git push`,"#);
+    println!(r#"After `cargo auto doc`, check `docs/index.html`. If ok, then `git commit -am"message"` and `git push`,"#);
     println!("then `cargo auto publish_to_crates_io`");
 }
 
