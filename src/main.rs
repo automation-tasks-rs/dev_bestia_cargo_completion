@@ -2,10 +2,10 @@
 //! # dev_bestia_cargo_completion  
 //!
 //! **dev_bestia_cargo_completion - experimental auto-completion for cargo and cargo-auto in bash**  
-//! ***[repository](https://github.com/LucianoBestia/dev_bestia_cargo_completion); version: 2021.817.1221  date: 2021-08-17 authors: Luciano Bestia***  
+//! ***[repository](https://github.com/LucianoBestia/dev_bestia_cargo_completion); version: 2021.817.1251  date: 2021-08-17 authors: Luciano Bestia***  
 //!
 //! [![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-50-green.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)
-//! [![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-65-blue.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)
+//! [![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-93-blue.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)
 //! [![Lines in Comments](https://img.shields.io/badge/Lines_in_comments-18-purple.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)
 //! [![Lines in examples](https://img.shields.io/badge/Lines_in_examples-0-yellow.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)
 //! [![Lines in tests](https://img.shields.io/badge/Lines_in_tests-0-orange.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)
@@ -55,7 +55,7 @@
 //!
 //! ## development
 //!
-//! I choose this long name for my crate, because cargo-completion is a hot topic. Sooner or later someone will build it - officially. This is why I added the prefix `dev_bestia_`, because my web domain is [bestia.dev](https:://bestia.dev). This way I have the guarantee of a unique name and leave the short name to the future official version.  
+//! I choose this long name for my crate, because cargo-completion is a hot topic. Sooner or later someone will build it - officially. This is why I added the prefix `dev_bestia_`, because my web domain is [bestia.dev](https://bestia.dev). This way I have the guarantee of a unique name and leave the short name to the future official version.  
 //! Run
 //!
 //! ```bash
