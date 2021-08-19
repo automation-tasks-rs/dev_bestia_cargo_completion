@@ -2,7 +2,7 @@
 //! # dev_bestia_cargo_completion  
 //!
 //! **Full auto-completion for cargo-auto and automation_tasks_rs and partial auto-completion for cargo  in bash**  
-//! ***[repository](https://github.com/LucianoBestia/dev_bestia_cargo_completion); version: 2021.817.1756  date: 2021-08-17 authors: Luciano Bestia***  
+//! ***[repository](https://github.com/LucianoBestia/dev_bestia_cargo_completion); version: 2021.819.909  date: 2021-08-19 authors: Luciano Bestia***  
 //!
 //! [![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-55-green.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)
 //! [![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-93-blue.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)
@@ -144,11 +144,11 @@ fn main() {
         // words after `cargo auto` execute the appropriate binary, that responds with println
         // 1st argument in "completion"
         // 2rd argument is the `word_being_completed`
-        // 3nd argument is the `last_word`        
+        // 3nd argument is the `last_word`
         let path_to_automation = "automation_tasks_rs/target/debug/automation_tasks_rs";
         if Path::new(path_to_automation).exists() {
             std::process::Command::new(path_to_automation)
-                .arg("completion")                
+                .arg("completion")
                 .arg(word_being_completed)
                 .arg(last_word)
                 .spawn()
@@ -157,7 +157,7 @@ fn main() {
                 .unwrap();
         } else {
             std::process::Command::new("cargo-auto")
-                .arg("completion")                
+                .arg("completion")
                 .arg(word_being_completed)
                 .arg(last_word)
                 .spawn()
