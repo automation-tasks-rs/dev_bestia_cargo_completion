@@ -143,23 +143,23 @@ fn main() {
     } else if comp_line.starts_with("cargo auto") {
         // words after `cargo auto` execute the appropriate binary, that responds with println
         // 1st argument in "completion"
-        // 2nd argument is the `last_word`
-        // 3rd argument is the `word_being_completed`
+        // 2rd argument is the `word_being_completed`
+        // 3nd argument is the `last_word`        
         let path_to_automation = "automation_tasks_rs/target/debug/automation_tasks_rs";
         if Path::new(path_to_automation).exists() {
             std::process::Command::new(path_to_automation)
-                .arg("completion")
-                .arg(last_word)
+                .arg("completion")                
                 .arg(word_being_completed)
+                .arg(last_word)
                 .spawn()
                 .unwrap()
                 .wait()
                 .unwrap();
         } else {
             std::process::Command::new("cargo-auto")
-                .arg("completion")
-                .arg(last_word)
+                .arg("completion")                
                 .arg(word_being_completed)
+                .arg(last_word)
                 .spawn()
                 .unwrap()
                 .wait()
