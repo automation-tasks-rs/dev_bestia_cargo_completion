@@ -59,6 +59,8 @@ complete
 complete -r cargo
 # define a binary to auto-complete the command
 complete -C "binary" command
+# for example
+complete -C "dev_bestia_cargo_completion" cargo
 ```
 
 ## development
