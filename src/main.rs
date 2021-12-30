@@ -2,9 +2,9 @@
 //! # dev_bestia_cargo_completion  
 //!
 //! **Full auto-completion for cargo-auto and automation_tasks_rs and partial auto-completion for cargo  in bash**  
-//! ***[repository](https://github.com/LucianoBestia/dev_bestia_cargo_completion); version: 2021.819.909  date: 2021-08-19 authors: Luciano Bestia***  
+//! ***[repository](https://github.com/LucianoBestia/dev_bestia_cargo_completion); version: 2021.1230.1047  date: 2021-12-30 authors: Luciano Bestia***  
 //!
-//! [![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-55-green.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)
+//! [![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-57-green.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)
 //! [![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-93-blue.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)
 //! [![Lines in Comments](https://img.shields.io/badge/Lines_in_comments-21-purple.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)
 //! [![Lines in examples](https://img.shields.io/badge/Lines_in_examples-0-yellow.svg)](https://github.com/LucianoBestia/dev_bestia_cargo_completion/)
@@ -51,6 +51,8 @@
 //! complete -r cargo
 //! # define a binary to auto-complete the command
 //! complete -C "binary" command
+//! # for example
+//! complete -C "dev_bestia_cargo_completion" cargo
 //! ```
 //!
 //! ## development
@@ -74,10 +76,9 @@
 //! complete -C "/home/luciano/rustprojects/dev_bestia_cargo_completion/target/debug/dev_bestia_cargo_completion" cargo
 //! ```
 //!
-//!
 //! ## cargo crev reviews and advisory
 //!
-//! We leave in times of danger with `supply chain attacks`.  
+//! We leave in times of danger with [supply chain attacks](https://en.wikipedia.org/wiki/Supply_chain_attack).  
 //! It is recommended to always use [cargo-crev](https://github.com/crev-dev/cargo-crev)  
 //! to verify the trustworthiness of each of your dependencies.  
 //! Please, spread this info.  
@@ -88,7 +89,9 @@
 //!
 //! My open-source projects are free and free as a beer (MIT license).  
 //! I just love programming.  
-//! But I need also to drink. If you find my projects and tutorials helpful, please buy me a beer or two donating on my [paypal](https://www.paypal.com/paypalme/LucianoBestia). You know the price of a beer in your local bar ;-)  
+//! But I need also to drink. If you find my projects and tutorials helpful,  
+//! please buy me a beer or two donating on my [paypal](https://www.paypal.com/paypalme/LucianoBestia).  
+//! You know the price of a beer in your local bar ;-)  
 //! So I can drink a free beer for your health :-)  
 //! [Na zdravje](https://translate.google.com/?hl=en&sl=sl&tl=en&text=Na%20zdravje&op=translate) !
 //!
@@ -119,7 +122,9 @@ fn main() {
 
     // first word after `cargo`
     if vec_comp_line.len() <= 2 && last_word == "cargo" {
-        let sub_commands_after_cargo = vec!["auto", "build", "check", "new", "doc", "test", "fmt"];
+        let sub_commands_after_cargo = vec![
+            "auto", "build", "check", "new", "doc", "test", "fmt", "install",
+        ];
         for sub_command in sub_commands_after_cargo {
             // list all for `tab tab` or list only one starting with the word
             if vec_comp_line.len() == 1 || sub_command.starts_with(word_being_completed) {
