@@ -1,7 +1,7 @@
 [package]
 name = "dev_bestia_cargo_completion"
 version = "2021.1230.1047"
-authors = ["bestia.dev <info@bestia.dev>"]
+authors = ["bestia.dev"]
 edition = "2018"
 description = "Full auto-completion for cargo-auto and automation_tasks_rs and partial auto-completion for cargo  in bash"
 repository = "https://github.com/bestia-dev/dev_bestia_cargo_completion"
