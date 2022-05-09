@@ -1,8 +1,8 @@
-//! automation_tasks_rs with_lib
+//! automation_tasks_rs for dev_bestia_cargo_completion
 
 use cargo_auto_lib::*;
 
-/// automation_tasks_rs with_lib
+/// automation_tasks_rs for dev_bestia_cargo_completion
 fn main() {
     exit_if_not_run_in_rust_project_root_directory();
 
@@ -69,7 +69,7 @@ fn completion() {
     /*
     // the second level if needed
     else if last_word == "new" {
-        let sub_commands = vec!["with_lib"];
+        let sub_commands = vec!["x"];
         completion_return_one_or_more_sub_commands(sub_commands, word_being_completed);
     }
     */
