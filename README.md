@@ -4,7 +4,7 @@
 
 [comment]: # (auto_cargo_toml_to_md start)
 
-**Full auto-completion for cargo-auto and automation_tasks_rs and partial auto-completion for cargo  in bash**  
+**Full auto-completion for cargo-auto and automation_tasks_rs and partial auto-completion for cargo in bash**  
 ***version: 2021.1230.1047  date: 2021-12-30 author: [bestia.dev](https://bestia.dev) repository: [GitHub](https://github.com/bestia-dev/dev_bestia_cargo_completion)***  
 
 [comment]: # (auto_cargo_toml_to_md end)
