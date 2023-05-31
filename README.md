@@ -1,22 +1,22 @@
-[comment]: # (auto_md_to_doc_comments segment start A)
+[//]: # (auto_md_to_doc_comments segment start A)
 
 # dev_bestia_cargo_completion  
 
-[comment]: # (auto_cargo_toml_to_md start)
+[//]: # (auto_cargo_toml_to_md start)
 
-**Full auto-completion for cargo-auto and automation_tasks_rs and partial auto-completion for cargo in bash**  
-***version: 2021.1230.1047  date: 2021-12-30 author: [bestia.dev](https://bestia.dev) repository: [GitHub](https://github.com/bestia-dev/dev_bestia_cargo_completion)***  
+**Full auto-completion for cargo-auto and automation_tasks_rs and partial auto-completion for cargo  in bash**  
+***version: 2023.531.1119 date: 2023-05-31 author: [bestia.dev](https://bestia.dev) repository: [Github](https://github.com/bestia-dev/dev_bestia_cargo_completion)***  
 
-[comment]: # (auto_cargo_toml_to_md end)
+[//]: # (auto_cargo_toml_to_md end)
 
-[comment]: # (auto_lines_of_code start)
+[//]: # (auto_lines_of_code start)
 [![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-57-green.svg)](https://github.com/bestia-dev/dev_bestia_cargo_completion/)
-[![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-93-blue.svg)](https://github.com/bestia-dev/dev_bestia_cargo_completion/)
+[![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-96-blue.svg)](https://github.com/bestia-dev/dev_bestia_cargo_completion/)
 [![Lines in Comments](https://img.shields.io/badge/Lines_in_comments-21-purple.svg)](https://github.com/bestia-dev/dev_bestia_cargo_completion/)
 [![Lines in examples](https://img.shields.io/badge/Lines_in_examples-0-yellow.svg)](https://github.com/bestia-dev/dev_bestia_cargo_completion/)
 [![Lines in tests](https://img.shields.io/badge/Lines_in_tests-0-orange.svg)](https://github.com/bestia-dev/dev_bestia_cargo_completion/)
 
-[comment]: # (auto_lines_of_code end)
+[//]: # (auto_lines_of_code end)
 
 [![crates.io](https://img.shields.io/crates/v/dev_bestia_cargo_completion.svg)](https://crates.io/crates/dev_bestia_cargo_completion)
 [![Documentation](https://docs.rs/dev_bestia_cargo_completion/badge.svg)](https://docs.rs/dev_bestia_cargo_completion/)
@@ -116,4 +116,4 @@ So I can drink a free beer for your health :-)
 [//bestiadev.substack.com](https://bestiadev.substack.com)  
 [//youtube.com/@bestia-dev-tutorials](https://youtube.com/@bestia-dev-tutorials)  
 
-[comment]: # (auto_md_to_doc_comments segment end A)
+[//]: # (auto_md_to_doc_comments segment end A)
