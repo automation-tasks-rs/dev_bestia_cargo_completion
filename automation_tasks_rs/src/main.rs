@@ -214,7 +214,7 @@ fn task_commit_and_push(arg_2: Option<String>) {
             println!(
                 r#"
     {YELLOW}After `cargo auto commit_and_push "message"`{RESET}
-{GREEN}cargo auto github_new_release{RESET}
+{GREEN}cargo auto publish_to_crates_io{RESET}
     {YELLOW}{RESET}"#
             );
         }
