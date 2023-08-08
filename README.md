@@ -7,6 +7,9 @@
 **Full auto-completion for cargo-auto and automation_tasks_rs and partial auto-completion for cargo  in bash**  
 ***version: 2023.531.1119 date: 2023-05-31 author: [bestia.dev](https://bestia.dev) repository: [Github](https://github.com/bestia-dev/dev_bestia_cargo_completion)***  
 
+![status](https://img.shields.io/badge/active_dev-green) 
+![status](https://img.shields.io/badge/in_use-green) 
+
 [//]: # (auto_cargo_toml_to_md end)
 
 [//]: # (auto_lines_of_code start)
