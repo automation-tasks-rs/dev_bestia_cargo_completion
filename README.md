@@ -94,15 +94,6 @@ You can change the definition for bash auto-completion to point to the compilati
 complete -C "/home/luciano/rustprojects/dev_bestia_cargo_completion/target/debug/dev_bestia_cargo_completion" cargo
 ```
 
-## cargo crev reviews and advisory
-
-We leave in times of danger with [supply chain attacks](https://en.wikipedia.org/wiki/Supply_chain_attack).  
-It is recommended to always use [cargo-crev](https://github.com/crev-dev/cargo-crev)  
-to verify the trustworthiness of each of your dependencies.  
-Please, spread this info.  
-You can also read reviews quickly on the web. Example for the crate `num-traits`:  
-<https://web.crev.dev/rust-reviews/crate/num-traits/>  
-
 ## Open-source and free as a beer
 
 My open-source projects are free as a beer (MIT license).  
