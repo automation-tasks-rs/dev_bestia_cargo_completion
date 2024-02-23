@@ -1,3 +1,5 @@
+// dev_bestia_cargo_completion/src/main.rs
+
 #![doc=include_str!("../README.md")]
 
 // region: use statements
