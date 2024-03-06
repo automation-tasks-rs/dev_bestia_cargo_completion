@@ -251,7 +251,7 @@ fn task_publish_to_crates_io() {
     {YELLOW}Install the crate with {RESET}
 {GREEN}cargo install {package_name}{RESET}
     {YELLOW}and check how it works.{RESET}
-    {YELLOW}Then create the Github-Release and upload the assets.{RESET}    
+    {YELLOW}Then create the GitHub-Release and upload the assets.{RESET}    
 {GREEN}cargo auto github_new_release{RESET}
 "#,
         package_name = cargo_toml.package_name(),
