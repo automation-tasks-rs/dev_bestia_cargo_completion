@@ -1,14 +1,15 @@
 [package]
 name = "dev_bestia_cargo_completion"
-version = "2023.531.1119"
+version = "2024.306.2155"
 authors = ["bestia.dev"]
 homepage = "https://bestia.dev"
 edition = "2021"
 description = "Auto-completion for cargo-auto and automation_tasks_rs and partial auto-completion for cargo in bash"
-repository = "https://github.com/bestia-dev/dev_bestia_cargo_completion"
+repository = "https://github.com/automation-tasks-rs/dev_bestia_cargo_completion"
 readme = "README.md"
 license = "MIT"
-keywords = ["rust", "make"]
+# Keyword must be only one word: lowercase letters, hyphens(-) or numbers, less then 35 characters.
+keywords = ["maintained","ready-for-use", "rustlang","cargo-auto"]
 categories = ["development-tools::build-utils"]
 # publish as a cargo tool. Only this files.
 publish = true
@@ -20,5 +21,4 @@ include = [
 ]
 
 [dependencies]
-unwrap = "1.2.1"
 lazy_static="1.4.0"

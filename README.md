@@ -5,19 +5,24 @@
 [//]: # (auto_cargo_toml_to_md start)
 
 **Auto-completion for cargo-auto and automation_tasks_rs and partial auto-completion for cargo in bash**  
-***version: 2023.531.1119 date: 2023-05-31 author: [bestia.dev](https://bestia.dev) repository: [Github](https://github.com/bestia-dev/dev_bestia_cargo_completion)***  
+***version: 2024.306.2155 date: 2024-03-06 author: [bestia.dev](https://bestia.dev) repository: [GitHub](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion)***
+
+ ![maintained](https://img.shields.io/badge/maintained-green)
+ ![ready-for-use](https://img.shields.io/badge/ready_for_use-green)
+ ![rustlang](https://img.shields.io/badge/rustlang-orange)
+ ![cargo-auto](https://img.shields.io/badge/cargo_auto-orange)
 
 [//]: # (auto_cargo_toml_to_md end)
 
- ![status](https://img.shields.io/badge/maintained-green)
- ![status](https://img.shields.io/badge/ready_for_use-green)
+ ![logo](https://raw.githubusercontent.com/automation-tasks-rs/cargo-auto/main/images/logo/logo_cargo_auto.svg)
+ dev_bestia_cargo_completion is part of [automation_tasks_rs](https://github.com/automation-tasks-rs) project
 
 [//]: # (auto_lines_of_code start)
-[![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-57-green.svg)](https://github.com/bestia-dev/dev_bestia_cargo_completion/)
-[![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-96-blue.svg)](https://github.com/bestia-dev/dev_bestia_cargo_completion/)
-[![Lines in Comments](https://img.shields.io/badge/Lines_in_comments-21-purple.svg)](https://github.com/bestia-dev/dev_bestia_cargo_completion/)
-[![Lines in examples](https://img.shields.io/badge/Lines_in_examples-0-yellow.svg)](https://github.com/bestia-dev/dev_bestia_cargo_completion/)
-[![Lines in tests](https://img.shields.io/badge/Lines_in_tests-0-orange.svg)](https://github.com/bestia-dev/dev_bestia_cargo_completion/)
+[![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-55-green.svg)](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/)
+[![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-0-blue.svg)](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/)
+[![Lines in Comments](https://img.shields.io/badge/Lines_in_comments-23-purple.svg)](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/)
+[![Lines in examples](https://img.shields.io/badge/Lines_in_examples-0-yellow.svg)](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/)
+[![Lines in tests](https://img.shields.io/badge/Lines_in_tests-0-orange.svg)](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/)
 
 [//]: # (auto_lines_of_code end)
 
@@ -25,12 +30,12 @@
  [![Documentation](https://docs.rs/dev_bestia_cargo_completion/badge.svg)](https://docs.rs/dev_bestia_cargo_completion/)
  [![crev reviews](https://web.crev.dev/rust-reviews/badge/crev_count/dev_bestia_cargo_completion.svg)](https://web.crev.dev/rust-reviews/crate/dev_bestia_cargo_completion/)
  [![Lib.rs](https://img.shields.io/badge/Lib.rs-rust-orange.svg)](https://lib.rs/crates/dev_bestia_cargo_completion/)
- [![Licence](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/bestia-dev/dev_bestia_cargo_completion/blob/master/LICENSE)
- [![Rust](https://github.com/bestia-dev/dev_bestia_cargo_completion/workflows/RustAction/badge.svg)](https://github.com/bestia-dev/dev_bestia_cargo_completion/)
+ [![Licence](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/blob/master/LICENSE)
+ [![Rust](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/workflows/RustAction/badge.svg)](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/)
  ![dev_bestia_cargo_completion](https://bestia.dev/webpage_hit_counter/get_svg_image/710310517.svg)
 
 Hashtags: #rustlang #buildtool #developmenttool  
-My projects on Github are more like a tutorial than a finished product: [bestia-dev tutorials](https://github.com/bestia-dev/tutorials_rust_wasm).
+My projects on Github are more like a tutorial than a finished product: [bestia-dev tutorials](https://github.com/automation-tasks-rs/tutorials_rust_wasm).
 
 ## Try it
 
@@ -75,26 +80,19 @@ complete -C "binary" command
 complete -C "dev_bestia_cargo_completion" cargo
 ```
 
-## development
+## Development details
 
-I choose this long name for my crate, because cargo-completion is a hot topic. Sooner or later someone will build it - officially. This is why I added the prefix `dev_bestia_`, because my web domain is [bestia.dev](https://bestia.dev). This way I have the guarantee of a unique name and leave the short name to the future official version.  
-Run
+Read the development details in a separate md file:  
+[DEVELOPMENT.md](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/blob/main/DEVELOPMENT.md)
 
-```bash
-cargo install cargo-auto
-```
+## Releases changelog
 
-and then list the user-defined automation tasks with
+Read the changelog in a separate md file:  
+[RELEASES.md](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/blob/main/RELEASES.md)
 
-```bash
-cargo auto
-```  
+## TODO
 
-You can change the definition for bash auto-completion to point to the compilation of this project in development. So you can easy test the auto-completion while developing it.
-
-```bash
-complete -C "/home/luciano/rustprojects/dev_bestia_cargo_completion/target/debug/dev_bestia_cargo_completion" cargo
-```
+Nothing big in the near future.
 
 ## Open-source and free as a beer
 

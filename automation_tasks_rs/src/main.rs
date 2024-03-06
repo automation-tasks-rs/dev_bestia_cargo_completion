@@ -80,7 +80,7 @@ fn print_help() {
     This task needs PAT (personal access token from github) in the env variable:{RESET}
 {GREEN} export GITHUB_TOKEN=paste_token_here{RESET}
 
-    {YELLOW}© 2024 bestia.dev  MIT License github.com/bestia-dev/cargo-auto{RESET}
+    {YELLOW}© 2024 bestia.dev  MIT License github.com/automation-tasks-rs/cargo-auto{RESET}
 "#
     );
     print_examples_cmd();
@@ -127,7 +127,6 @@ fn task_build() {
     cl::run_shell_command("cargo build");
     println!(
         r#"
-    {YELLOW}Your secret token must be in env variable: export bestia_dev_text_to_speech_api_key=YOUR_TOKEN{RESET}
     {YELLOW}After `cargo auto build`, run the compiled binary, examples and/or tests{RESET}
 {GREEN}./target/debug/{package_name} arg_1{RESET}
     {YELLOW}if ok then{RESET}
@@ -153,7 +152,6 @@ fn task_release() {
     )); 
     println!(
         r#"
-    {YELLOW}Your secret token must be in env variable: export bestia_dev_text_to_speech_api_key=YOUR_TOKEN{RESET}
     {YELLOW}After `cargo auto release`, run the compiled binary, examples and/or tests{RESET}
 {GREEN}./target/release/{package_name} arg_1{RESET}
     {YELLOW}if ok then{RESET}
@@ -264,45 +262,58 @@ fn task_publish_to_crates_io() {
 /// create a new release on github
 fn task_github_new_release() {
     let cargo_toml = cl::CargoToml::read();
-    println!("    {YELLOW}The env variable GITHUB_TOKEN must be set:  export GITHUB_TOKEN=paste_token_here{RESET}");
+    let version = cargo_toml.package_version();
+    // take care of tags
+    let tag_name_version = cl::git_tag_sync_check_create_push(&version);
 
-    // git tag
-    let shell_command = format!(
-        "git tag -f -a v{version} -m version_{version}",
-        version = cargo_toml.package_version()
+    let owner = cargo_toml.github_owner().unwrap();
+    let repo_name = cargo_toml.package_name();
+    let now_date = cl::now_utc_date_iso();
+    let release_name = format!("Version {} ({})", &version, now_date);
+    let branch = "main";
+
+    // First, the user must write the content into file RELEASES.md in the section ## Unreleased.
+    // Then the automation task will copy the content to GitHub release
+    // and create a new Version title in RELEASES.md.
+    let body_md_text = cl::body_text_from_releases_md(&release_name).unwrap();
+
+    let release_id = cl::github_api_create_new_release(
+        &owner,
+        &repo_name,
+        &tag_name_version,
+        &release_name,
+        branch,
+        &body_md_text,
     );
-    cl::run_shell_command(&shell_command);
 
-    // async block inside sync code with tokio
-    use tokio::runtime::Runtime;
-    let rt = Runtime::new().unwrap();
-    rt.block_on(async move {
-        let owner = cargo_auto_github_lib::github_owner();
-        let repo_name = cargo_toml.package_name();
-        let tag_name_version = format!("v{}", cargo_toml.package_version());
-        let release_name = format!("Release v{}", cargo_toml.package_version());
-        let branch = "main";
+    println!(
+        "
+    {YELLOW}New GitHub release created: {release_name}.{RESET}
+"
+    );
 
-        let body_md_text = &format!(
-r#"## Changed
+    // region: upload asset only for executables, not for libraries
+    println!("
+    {YELLOW}Now uploading release asset. This can take some time if the files are big. Wait...{RESET}
+    ");
+    // compress files tar.gz
+    let tar_name = format!("{repo_name}-{tag_name_version}-x86_64-unknown-linux-gnu.tar.gz");
+    cl::run_shell_command(&format!("tar -zcvf {tar_name} target/release/{repo_name}"));
 
-- edit the list of changes
-          
-"#);
+    // upload asset
+    cl::github_api_upload_asset_to_release(&owner, &repo_name, &release_id, &tar_name);
+    cl::run_shell_command(&format!("rm {tar_name}"));
 
-        let release_id =  auto_github_create_new_release(&owner, &repo_name, &tag_name_version, &release_name, branch, body_md_text).await;
-        println!("    {YELLOW}New release created, now uploading release asset. This can take some time if the files are big. Wait...{RESET}");
-
-        // compress files tar.gz
-        let tar_name = format!("{repo_name}-{tag_name_version}-x86_64-unknown-linux-gnu.tar.gz");
-        cl::run_shell_command(&format!("tar -zcvf {tar_name} target/release/{repo_name}"));
-        
-        // upload asset     
-        auto_github_upload_asset_to_release(&owner, &repo_name, &release_id, &tar_name).await;
-        cl::run_shell_command(&format!("rm {tar_name}"));  
-
-        println!("    {YELLOW}Asset uploaded. Open and edit the description on Github-Releases in the browser.{RESET}");
-        println!("{GREEN}https://github.com/{owner}/{repo_name}/releases{RESET}");
-    });
+    println!(
+        "
+    {YELLOW}Asset uploaded. Open and edit the description on GitHub Releases in the browser.{RESET}
+"
+    );
+    // endregion: upload asset only for executables, not for libraries
+    println!(
+        "
+{GREEN}https://github.com/{owner}/{repo_name}/releases{RESET}
+    "
+    );
 }
 // endregion: tasks
