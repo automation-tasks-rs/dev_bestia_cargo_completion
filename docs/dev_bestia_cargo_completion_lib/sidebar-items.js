@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["complete_automation","complete_cargo_auto","complete_cargo_build_partial","complete_cargo_partial"]};

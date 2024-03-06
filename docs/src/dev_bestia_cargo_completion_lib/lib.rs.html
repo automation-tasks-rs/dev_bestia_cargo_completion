@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="generator" content="rustdoc">
-  <meta name="description" content="Source of the Rust file `src/bin/dev_bestia_cargo_completion/main.rs`.">
-  <title>main.rs - source</title>
+  <meta name="description" content="Source of the Rust file `src/lib.rs`.">
+  <title>lib.rs - source</title>
   <link rel="preload" as="font" type="font/woff2" crossorigin="" href="../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin="" href="../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin="" href="../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2">
@@ -13,8 +13,8 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin="" href="../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2">
   <link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css">
   <link rel="stylesheet" href="../../static.files/rustdoc-ac92e1bbe349e143.css">
-  <meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="dev_bestia_cargo_completion" data-themes=""
-  data-resource-suffix="" data-rustdoc-version="1.76.0 (07dca489a 2024-02-04)" data-channel="1.76.0" data-search-js="search-2b6ce74ff89ae146.js"
+  <meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="dev_bestia_cargo_completion_lib"
+  data-themes="" data-resource-suffix="" data-rustdoc-version="1.76.0 (07dca489a 2024-02-04)" data-channel="1.76.0" data-search-js="search-2b6ce74ff89ae146.js"
   data-settings-js="settings-4313503d2e1961c2.js">
   <script src="../../static.files/storage-f2adc0d6ca4d09fb.js"></script>
   <script defer src="../../static.files/src-script-39ed315d46fb705f.js"></script>
@@ -31,8 +31,8 @@
   <div class="sidebar-resizer"></div>
   <main>
     <nav class="sub">
-      <a class="sub-logo-container" href="../../dev_bestia_cargo_completion/index.html"><img src=
-      "https://github.com/automation-tasks-rs/cargo-auto/raw/main/images/logo/logo_cargo_auto.svg" alt="dev_bestia_cargo_completion"></a>
+      <a class="sub-logo-container" href="../../dev_bestia_cargo_completion_lib/index.html"><img src=
+      "https://github.com/automation-tasks-rs/cargo-auto/raw/main/images/logo/logo_cargo_auto.svg" alt="dev_bestia_cargo_completion_lib"></a>
       <form class="search-form">
         <input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder=
         "Click or press ‘S’ to search, ‘?’ for more options…" type="search">
@@ -189,9 +189,34 @@
 <a href="#139" id="139">139</a>
 <a href="#140" id="140">140</a>
 <a href="#141" id="141">141</a>
+<a href="#142" id="142">142</a>
+<a href="#143" id="143">143</a>
+<a href="#144" id="144">144</a>
+<a href="#145" id="145">145</a>
+<a href="#146" id="146">146</a>
+<a href="#147" id="147">147</a>
+<a href="#148" id="148">148</a>
+<a href="#149" id="149">149</a>
+<a href="#150" id="150">150</a>
+<a href="#151" id="151">151</a>
+<a href="#152" id="152">152</a>
+<a href="#153" id="153">153</a>
+<a href="#154" id="154">154</a>
+<a href="#155" id="155">155</a>
+<a href="#156" id="156">156</a>
+<a href="#157" id="157">157</a>
+<a href="#158" id="158">158</a>
+<a href="#159" id="159">159</a>
+<a href="#160" id="160">160</a>
+<a href="#161" id="161">161</a>
+<a href="#162" id="162">162</a>
+<a href="#163" id="163">163</a>
+<a href="#164" id="164">164</a>
+<a href="#165" id="165">165</a>
+<a href="#166" id="166">166</a>
 </pre>
         </div>
-        <pre class="rust"><code><span class="comment">// dev_bestia_cargo_completion/src/bin/dev_bestia_cargo_completion/main.rs
+        <pre class="rust"><code><span class="comment">// dev_bestia_cargo_completion/src/lib.rs
 
 // logo for docs.rs in png
 </span><span class="attr">#![doc(html_logo_url = <span class=
@@ -301,38 +326,64 @@
 //!
 </span><span class="comment">// endregion: auto_md_to_doc_comments include README.md A //!
 
-</span><span class="kw">fn </span>main() {
-    <span class="comment">// region: Environment Variables
-    // COMP_LINE - the full text that the user has entered
-    // COMP_POINT - the cursor position (a numeric index into COMP_LINE)¸
-    </span><span class="kw">let </span>comp_line = std::env::var(<span class="string">"COMP_LINE"</span>).unwrap();
-    <span class="kw">let </span>_comp_point = std::env::var(<span class="string">"COMP_POINT"</span>).unwrap().parse::&lt;usize&gt;().unwrap();
-    <span class="kw">let </span>vec_comp_line: Vec&lt;<span class="kw-2">&</span>str&gt; = comp_line.split_whitespace().collect();
-    <span class="comment">// endregion: Environment Variable
-
-    // region: CLI arguments
-    </span><span class="kw">let </span>args: Vec&lt;String&gt; = std::env::args().collect();
-    <span class="comment">// args[2] - the word we are completing
-    </span><span class="kw">let </span>word_being_completed = <span class="kw-2">&</span>args[<span class="number">2</span>];
-    <span class="comment">// args[3] - the last word before that
-    </span><span class="kw">let </span>last_word = <span class="kw-2">&</span>args[<span class="number">3</span>];
-    <span class="comment">// endregion: CLI arguments
-
-    // first word after `cargo`
-    </span><span class="kw">if </span>vec_comp_line.len() &lt;= <span class="number">2 </span>&amp;& last_word == <span class="string">"cargo" </span>{
-        <span class="kw">let </span>vec_comp_line_len = vec_comp_line.len();
-        dev_bestia_cargo_completion_lib::complete_cargo_partial(vec_comp_line_len, word_being_completed);
+</span><span class="doccomment">/// partial completion of the cargo command
+/// first word after `cargo`
+</span><span class="kw">pub fn </span>complete_cargo_partial(vec_comp_line_len: usize, word_being_completed: <span class="kw-2">&</span>str) {
+    <span class="kw">let </span>sub_commands_after_cargo = <span class="macro">vec!</span>[<span class="string">"auto"</span>, <span class=
+"string">"build"</span>, <span class="string">"check"</span>, <span class="string">"new"</span>, <span class="string">"doc"</span>, <span class=
+"string">"test"</span>, <span class="string">"fmt"</span>, <span class="string">"install"</span>];
+    <span class="kw">for </span>sub_command <span class="kw">in </span>sub_commands_after_cargo {
+        <span class="comment">// list all for `tab tab` or list only one starting with the word
+        </span><span class="kw">if </span>vec_comp_line_len == <span class="number">1 </span>|| sub_command.starts_with(word_being_completed) {
+            <span class="macro">println!</span>(<span class="string">"{}"</span>, sub_command);
+        }
     }
-    <span class="comment">// the first word after `cargo build`
-    </span><span class="kw">else if </span>vec_comp_line.len() &lt;= <span class="number">3 </span>&amp;& last_word == <span class=
-"string">"build" </span>&amp;& comp_line.starts_with(<span class="string">"cargo build"</span>) {
-        <span class="kw">let </span>vec_comp_line_len = vec_comp_line.len();
-        dev_bestia_cargo_completion_lib::complete_cargo_build_partial(vec_comp_line_len, word_being_completed);
-    } <span class="kw">else if </span>comp_line.starts_with(<span class="string">"cargo auto"</span>) {
-        dev_bestia_cargo_completion_lib::complete_automation(word_being_completed, last_word);
-    } <span class="kw">else </span>{
-        dev_bestia_cargo_completion_lib::complete_cargo_auto(word_being_completed, last_word);
+}
+
+<span class="doccomment">/// partial completion of the cargo build command
+/// first word after `cargo build`
+</span><span class="kw">pub fn </span>complete_cargo_build_partial(vec_comp_line_len: usize, word_being_completed: <span class="kw-2">&</span>str) {
+    <span class="kw">let </span>sub_commands = <span class="macro">vec!</span>[<span class="string">"--release"</span>];
+
+    <span class="kw">for </span>sub_command <span class="kw">in </span>sub_commands {
+        <span class="comment">// list all for `tab tab` or list only one starting with the word
+        </span><span class="kw">if </span>vec_comp_line_len == <span class="number">2 </span>|| sub_command.starts_with(word_being_completed) {
+            <span class="macro">println!</span>(<span class="string">"{}"</span>, sub_command);
+        }
     }
+}
+
+<span class="doccomment">/// words after `cargo auto` execute the appropriate binary, that responds with println
+/// 1st argument in "completion"
+/// 2rd argument is the `word_being_completed`
+/// 3nd argument is the `last_word`
+</span><span class="kw">pub fn </span>complete_automation(word_being_completed: <span class="kw-2">&</span>str, last_word: <span class="kw-2">&</span>str) {
+    <span class="kw">let </span>path_to_automation = <span class="string">"automation_tasks_rs/target/debug/automation_tasks_rs"</span>;
+    <span class="kw">if </span>std::path::Path::new(path_to_automation).exists() {
+        std::process::Command::new(path_to_automation)
+            .arg(<span class="string">"completion"</span>)
+            .arg(word_being_completed)
+            .arg(last_word)
+            .spawn()
+            .unwrap()
+            .wait()
+            .unwrap();
+    }
+}
+
+<span class="doccomment">/// words after `cargo auto` execute the appropriate binary, that responds with println
+/// 1st argument in "completion"
+/// 2rd argument is the `word_being_completed`
+/// 3nd argument is the `last_word`
+</span><span class="kw">pub fn </span>complete_cargo_auto(word_being_completed: <span class="kw-2">&</span>str, last_word: <span class="kw-2">&</span>str) {
+    std::process::Command::new(<span class="string">"cargo-auto"</span>)
+        .arg(<span class="string">"completion"</span>)
+        .arg(word_being_completed)
+        .arg(last_word)
+        .spawn()
+        .unwrap()
+        .wait()
+        .unwrap();
 }
 </code></pre>
       </div>

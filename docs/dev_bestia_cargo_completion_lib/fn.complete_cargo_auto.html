@@ -4,8 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="generator" content="rustdoc">
-  <meta name="description" content="API documentation for the Rust `main` fn in crate `dev_bestia_cargo_completion`.">
-  <title>main in dev_bestia_cargo_completion - Rust</title>
+  <meta name="description" content=
+  "words after `cargo auto` execute the appropriate binary, that responds with println 1st argument in “completion” 2rd argument is the `word_being_completed` 3nd argument is the `last_word`">
+  <title>complete_cargo_auto in dev_bestia_cargo_completion_lib - Rust</title>
   <link rel="preload" as="font" type="font/woff2" crossorigin="" href="../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin="" href="../static.files/FiraSans-Regular-018c141bf0843ffd.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin="" href="../static.files/FiraSans-Medium-8f9a781e4970d388.woff2">
@@ -13,7 +14,7 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin="" href="../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2">
   <link rel="stylesheet" href="../static.files/normalize-76eba96aa4d2e634.css">
   <link rel="stylesheet" href="../static.files/rustdoc-ac92e1bbe349e143.css">
-  <meta name="rustdoc-vars" data-root-path="../" data-static-root-path="../static.files/" data-current-crate="dev_bestia_cargo_completion" data-themes=""
+  <meta name="rustdoc-vars" data-root-path="../" data-static-root-path="../static.files/" data-current-crate="dev_bestia_cargo_completion_lib" data-themes=""
   data-resource-suffix="" data-rustdoc-version="1.76.0 (07dca489a 2024-02-04)" data-channel="1.76.0" data-search-js="search-2b6ce74ff89ae146.js"
   data-settings-js="settings-4313503d2e1961c2.js">
   <script src="../static.files/storage-f2adc0d6ca4d09fb.js"></script>
@@ -27,14 +28,14 @@
 <body class="rustdoc fn">
   <!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
   <nav class="mobile-topbar">
-    <button class="sidebar-menu-toggle">☰</button><a class="logo-container" href="../dev_bestia_cargo_completion/index.html"><img src=
+    <button class="sidebar-menu-toggle">☰</button><a class="logo-container" href="../dev_bestia_cargo_completion_lib/index.html"><img src=
     "https://github.com/automation-tasks-rs/cargo-auto/raw/main/images/logo/logo_cargo_auto.svg" alt=""></a>
   </nav>
   <nav class="sidebar">
     <div class="sidebar-crate">
-      <a class="logo-container" href="../dev_bestia_cargo_completion/index.html"><img src=
+      <a class="logo-container" href="../dev_bestia_cargo_completion_lib/index.html"><img src=
       "https://github.com/automation-tasks-rs/cargo-auto/raw/main/images/logo/logo_cargo_auto.svg" alt="logo"></a>
-      <h2><a href="../dev_bestia_cargo_completion/index.html">dev_bestia_cargo_completion</a><span class="version">2024.306.2242</span></h2>
+      <h2><a href="../dev_bestia_cargo_completion_lib/index.html">dev_bestia_cargo_completion_lib</a><span class="version">2024.306.2242</span></h2>
     </div>
     <div class="sidebar-elems"></div>
   </nav>
@@ -44,7 +45,7 @@
       <nav class="sub">
         <form class="search-form">
           <div id="sidebar-button" tabindex="-1">
-            <a href="../dev_bestia_cargo_completion/all.html" title="show sidebar"></a>
+            <a href="../dev_bestia_cargo_completion_lib/all.html" title="show sidebar"></a>
           </div><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder=
           "Click or press ‘S’ to search, ‘?’ for more options…" type="search">
           <div id="help-button" tabindex="-1">
@@ -57,12 +58,23 @@
       </nav>
       <section id="main-content" class="content">
         <div class="main-heading">
-          <h1>Function <a href="index.html">dev_bestia_cargo_completion</a>::<wbr><a class="fn" href="#">main</a><button id="copy-path" title=
-          "Copy item path to clipboard"><img src="../static.files/clipboard-7571035ce49a181d.svg" width="19" height="18" alt=
-          "Copy item path"></button></h1><span class="out-of-band"><a class="src" href="../src/dev_bestia_cargo_completion/main.rs.html#110-141">source</a> ·
-          <button id="toggle-all-docs" title="collapse all docs">[<span>−</span>]</button></span>
+          <h1>Function <a href="index.html">dev_bestia_cargo_completion_lib</a>::<wbr><a class="fn" href="#">complete_cargo_auto</a><button id="copy-path"
+          title="Copy item path to clipboard"><img src="../static.files/clipboard-7571035ce49a181d.svg" width="19" height="18" alt=
+          "Copy item path"></button></h1><span class="out-of-band"><a class="src" href="../src/dev_bestia_cargo_completion_lib/lib.rs.html#157-166">source</a>
+          · <button id="toggle-all-docs" title="collapse all docs">[<span>−</span>]</button></span>
         </div>
-        <pre class="rust item-decl"><code>pub(crate) fn main()</code></pre>
+        <pre class="rust item-decl"><code>pub fn complete_cargo_auto(word_being_completed: &<a class="primitive" href=
+        "https://doc.rust-lang.org/1.76.0/std/primitive.str.html">str</a>, last_word: &<a class="primitive" href=
+        "https://doc.rust-lang.org/1.76.0/std/primitive.str.html">str</a>)</code></pre>
+        <details class="toggle top-doc" open="">
+          <summary class="hideme">
+            <span>Expand description</span>
+          </summary>
+          <div class="docblock">
+            <p>words after <code>cargo auto</code> execute the appropriate binary, that responds with println 1st argument in “completion” 2rd argument is the
+            <code>word_being_completed</code> 3nd argument is the <code>last_word</code></p>
+          </div>
+        </details>
       </section>
     </div>
   </main>
