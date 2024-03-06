@@ -1,6 +1,6 @@
 [package]
 name = "dev_bestia_cargo_completion"
-version = "2024.306.2155"
+version = "2024.306.2242"
 authors = ["bestia.dev"]
 homepage = "https://bestia.dev"
 edition = "2021"
@@ -21,4 +21,9 @@ include = [
 ]
 
 [dependencies]
-lazy_static="1.4.0"
+
+[lib]
+name = "dev_bestia_cargo_completion_lib"
+
+[[bin]]
+name = "dev_bestia_cargo_completion"

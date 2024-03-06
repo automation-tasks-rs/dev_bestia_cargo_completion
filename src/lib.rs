@@ -1,4 +1,4 @@
-// dev_bestia_cargo_completion/src/main.rs
+// dev_bestia_cargo_completion/src/lib.rs
 
 // logo for docs.rs in png
 #![doc(html_logo_url = "https://github.com/automation-tasks-rs/cargo-auto/raw/main/images/logo/logo_cargo_auto.svg")]
@@ -6,7 +6,7 @@
 //! # dev_bestia_cargo_completion  
 //!
 //! **Auto-completion for cargo-auto and automation_tasks_rs and partial auto-completion for cargo in bash**  
-//! ***version: 2024.306.2155 date: 2024-03-06 author: [bestia.dev](https://bestia.dev) repository: [GitHub](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion)***
+//! ***version: 2024.306.2242 date: 2024-03-06 author: [bestia.dev](https://bestia.dev) repository: [GitHub](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion)***
 //!
 //!  ![maintained](https://img.shields.io/badge/maintained-green)
 //!  ![ready-for-use](https://img.shields.io/badge/ready_for_use-green)
@@ -16,9 +16,9 @@
 //!  ![logo](https://raw.githubusercontent.com/automation-tasks-rs/cargo-auto/main/images/logo/logo_cargo_auto.svg)
 //!  dev_bestia_cargo_completion is part of [automation_tasks_rs](https://github.com/automation-tasks-rs) project
 //!
-//! [![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-55-green.svg)](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/)
-//! [![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-0-blue.svg)](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/)
-//! [![Lines in Comments](https://img.shields.io/badge/Lines_in_comments-23-purple.svg)](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/)
+//! [![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-74-green.svg)](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/)
+//! [![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-113-blue.svg)](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/)
+//! [![Lines in Comments](https://img.shields.io/badge/Lines_in_comments-20-purple.svg)](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/)
 //! [![Lines in examples](https://img.shields.io/badge/Lines_in_examples-0-yellow.svg)](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/)
 //! [![Lines in tests](https://img.shields.io/badge/Lines_in_tests-0-orange.svg)](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/)
 //!
@@ -27,7 +27,7 @@
 //!  [![crev reviews](https://web.crev.dev/rust-reviews/badge/crev_count/dev_bestia_cargo_completion.svg)](https://web.crev.dev/rust-reviews/crate/dev_bestia_cargo_completion/)
 //!  [![Lib.rs](https://img.shields.io/badge/Lib.rs-rust-orange.svg)](https://lib.rs/crates/dev_bestia_cargo_completion/)
 //!  [![Licence](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/blob/master/LICENSE)
-//!  [![Rust](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/workflows/RustAction/badge.svg)](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/)
+//!  [![Rust](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/workflows/rust_fmt_auto_build_test/badge.svg)](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/)
 //!  ![dev_bestia_cargo_completion](https://bestia.dev/webpage_hit_counter/get_svg_image/710310517.svg)
 //!
 //! Hashtags: #rustlang #buildtool #developmenttool  
@@ -106,72 +106,60 @@
 //!
 // endregion: auto_md_to_doc_comments include README.md A //!
 
-// region: use statements
-// use lazy_static::lazy_static;
-use std::{env, path::Path, vec};
-// endregion
-
-fn main() {
-    // region: Environment Variables
-    // COMP_LINE - the full text that the user has entered
-    // COMP_POINT - the cursor position (a numeric index into COMP_LINE)¸
-    let comp_line = env::var("COMP_LINE").unwrap();
-    let _comp_point = env::var("COMP_POINT").unwrap().parse::<usize>().unwrap();
-    let vec_comp_line: Vec<&str> = comp_line.split_whitespace().collect();
-    // endregion: Environment Variable
-
-    // region: CLI arguments
-    let args: Vec<String> = env::args().collect();
-    // args[2] - the word we are completing
-    let word_being_completed = &args[2];
-    // args[3] - the last word before that
-    let last_word = &args[3];
-    // endregion: CLI arguments
-
-    // first word after `cargo`
-    if vec_comp_line.len() <= 2 && last_word == "cargo" {
-        let sub_commands_after_cargo = vec!["auto", "build", "check", "new", "doc", "test", "fmt", "install"];
-        for sub_command in sub_commands_after_cargo {
-            // list all for `tab tab` or list only one starting with the word
-            if vec_comp_line.len() == 1 || sub_command.starts_with(word_being_completed) {
-                println!("{}", sub_command);
-            }
+/// partial completion of the cargo command
+/// first word after `cargo`
+pub fn complete_cargo_partial(vec_comp_line_len: usize, word_being_completed: &str) {
+    let sub_commands_after_cargo = vec!["auto", "build", "check", "new", "doc", "test", "fmt", "install"];
+    for sub_command in sub_commands_after_cargo {
+        // list all for `tab tab` or list only one starting with the word
+        if vec_comp_line_len == 1 || sub_command.starts_with(word_being_completed) {
+            println!("{}", sub_command);
         }
     }
-    // the first word after `cargo build`
-    else if vec_comp_line.len() <= 3 && last_word == "build" && comp_line.starts_with("cargo build") {
-        let sub_commands = vec!["--release"];
+}
 
-        for sub_command in sub_commands {
-            // list all for `tab tab` or list only one starting with the word
-            if vec_comp_line.len() == 2 || sub_command.starts_with(word_being_completed) {
-                println!("{}", sub_command);
-            }
-        }
-    } else if comp_line.starts_with("cargo auto") {
-        // words after `cargo auto` execute the appropriate binary, that responds with println
-        // 1st argument in "completion"
-        // 2rd argument is the `word_being_completed`
-        // 3nd argument is the `last_word`
-        let path_to_automation = "automation_tasks_rs/target/debug/automation_tasks_rs";
-        if Path::new(path_to_automation).exists() {
-            std::process::Command::new(path_to_automation)
-                .arg("completion")
-                .arg(word_being_completed)
-                .arg(last_word)
-                .spawn()
-                .unwrap()
-                .wait()
-                .unwrap();
-        } else {
-            std::process::Command::new("cargo-auto")
-                .arg("completion")
-                .arg(word_being_completed)
-                .arg(last_word)
-                .spawn()
-                .unwrap()
-                .wait()
-                .unwrap();
+/// partial completion of the cargo build command
+/// first word after `cargo build`
+pub fn complete_cargo_build_partial(vec_comp_line_len: usize, word_being_completed: &str) {
+    let sub_commands = vec!["--release"];
+
+    for sub_command in sub_commands {
+        // list all for `tab tab` or list only one starting with the word
+        if vec_comp_line_len == 2 || sub_command.starts_with(word_being_completed) {
+            println!("{}", sub_command);
         }
     }
+}
+
+/// words after `cargo auto` execute the appropriate binary, that responds with println
+/// 1st argument in "completion"
+/// 2rd argument is the `word_being_completed`
+/// 3nd argument is the `last_word`
+pub fn complete_automation(word_being_completed: &str, last_word: &str) {
+    let path_to_automation = "automation_tasks_rs/target/debug/automation_tasks_rs";
+    if std::path::Path::new(path_to_automation).exists() {
+        std::process::Command::new(path_to_automation)
+            .arg("completion")
+            .arg(word_being_completed)
+            .arg(last_word)
+            .spawn()
+            .unwrap()
+            .wait()
+            .unwrap();
+    }
+}
+
+/// words after `cargo auto` execute the appropriate binary, that responds with println
+/// 1st argument in "completion"
+/// 2rd argument is the `word_being_completed`
+/// 3nd argument is the `last_word`
+pub fn complete_cargo_auto(word_being_completed: &str, last_word: &str) {
+    std::process::Command::new("cargo-auto")
+        .arg("completion")
+        .arg(word_being_completed)
+        .arg(last_word)
+        .spawn()
+        .unwrap()
+        .wait()
+        .unwrap();
 }
