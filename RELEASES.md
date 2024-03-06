@@ -9,9 +9,11 @@ The ongoing changes that are not released, are visible in the git commits and gi
 The TODO section is part of the [README.md](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion).  
 
 ## Unreleased
+- bin lib
+
+## Version 2024.306.2242 (2024-03-06)
+
 - part of automation-tasks-rs
-- docs
-- docs
 
 ## Version 2023.531.1119 (2023-05-31)
 

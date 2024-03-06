@@ -49,3 +49,20 @@ You can change the definition for bash auto-completion to point to the compilati
 ```bash
 complete -C "/home/luciano/rustprojects/dev_bestia_cargo_completion/target/debug/dev_bestia_cargo_completion" cargo
 ```
+
+## Confusion with names in the Rust project
+
+The Rust project is a `[package]`. That is called also a "crate". It can contain one `[lib]` and many `[[bin]]` segments.  
+"Lib" stands for library and this is a word anybody can understand.  
+"Bin" stands for binary and is very confusing. In this narrow context it is an "executable binary" or "executable" or "runnable program".  
+It is confusing because we have many many binary formats today: jpg, mp4,... The term "binary file" is often used as a term meaning "non-text file".
+Let's call our bin just bin for clarity.  
+
+On crates.io we can publish "packages" or other name "crates". They can contain a "lib" or "bin" or combinations of these two. But crates.io does not recognize "bin" correctly. It treats them like libraries. It shows the suggestion to add it to your dependencies instead of showing the `cargo install` command. Weird.
+
+There are many many different ways to structure a project in Rust. This is pretty confusing, but there is no medicine.  
+I put a `lib.rs` inside the `/src/` folder. Then I make a sub-folder `/src/bin/name-of-bin` and put `main.rs` inside.
+In Cargo.toml I define a name of the package/crate in `[package]-name`, the name of the `lib` in `[lib]-name` and the name of the `bin` in `[[bin]]-name`.
+Confusing? Yes. But it works somehow until we want to have the documentation on `docs.rs`.
+
+Docs.rs is happy to create documentation for libraries, but not for binaries. But the local command `cargo doc` is happy with both of them. Weird.

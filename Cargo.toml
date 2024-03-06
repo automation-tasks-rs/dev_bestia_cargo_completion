@@ -1,6 +1,6 @@
 [package]
 name = "dev_bestia_cargo_completion"
-version = "2024.306.2242"
+version = "2024.306.2322"
 authors = ["bestia.dev"]
 homepage = "https://bestia.dev"
 edition = "2021"
@@ -24,6 +24,12 @@ include = [
 
 [lib]
 name = "dev_bestia_cargo_completion_lib"
+path = "src/lib.rs"
+# A flag for enabling documentation of this target. This is used by `cargo doc`.
+doc = true
 
 [[bin]]
 name = "dev_bestia_cargo_completion"
+path = "src/bin/dev_bestia_cargo_completion/main.rs"
+# A flag for enabling documentation of this target. This is used by `cargo doc`.
+doc = true
