@@ -51,7 +51,7 @@ fn match_arguments_and_call_tasks(mut args: std::env::Args) {
                 } else if &task == "github_new_release" {
                     task_github_new_release();
                 } else {
-                    println!("{RED}Error: Task {task} is unknown.{RESET}");
+                    eprintln!("{RED}Error: Task {task} is unknown.{RESET}");
                     print_help();
                 }
             }
@@ -71,14 +71,16 @@ fn print_help() {
 {GREEN}cargo auto release{RESET} - {YELLOW}builds the crate in release mode, fmt, increment version{RESET}
 {GREEN}cargo auto doc{RESET} - {YELLOW}builds the docs, copy to docs directory{RESET}
 {GREEN}cargo auto test{RESET} - {YELLOW}runs all the tests{RESET}
-{GREEN}cargo auto commit_and_push "message"{RESET} - {YELLOW}commits with message and push with mandatory message
-    (If you use SSH, it is easy to start the ssh-agent in the background and ssh-add your credentials for git.){RESET}
-{GREEN}cargo auto publish_to_crates_io{RESET} - {YELLOW}publish to crates.io, git tag
-    (You need credentials for publishing. On crates.io get the 'access token'. Then save it locally once and forever with the command 
-    ` cargo login TOKEN` use a space before the command to avoid saving the secret token in bash history.){RESET}
-{GREEN}cargo auto github_new_release{RESET} - {YELLOW}creates new release on github
-    This task needs PAT (personal access token from github) in the env variable:{RESET}
-{GREEN} export GITHUB_TOKEN=paste_token_here{RESET}
+{GREEN}cargo auto commit_and_push "message"{RESET} - {YELLOW}commits with message and push with mandatory message{RESET}
+    {YELLOW}It is preferred to use SSH for git push to GitHub.{RESET}
+    {YELLOW}<https://github.com/automation-tasks-rs/docker_rust_development/blob/main/ssh_easy.md>{YELLOW}
+    {YELLOW}On the very first commit, this task will initialize a new local git repository and create a remote GitHub repo.{RESET}
+    {YELLOW}In that case the task needs the Personal Access Token Classic from <https://github.com/settings/tokens>{RESET}
+{GREEN}cargo auto publish_to_crates_io{RESET} - {YELLOW}publish to crates.io, git tag{RESET}
+    {YELLOW}You need the API token for publishing. Get the token on <https://crates.io/settings/tokens>. Then use the command{RESET}
+    {YELLOW}`cargo login` and paste the token when prompted. This will save it to a local credentials file.{RESET}
+{GREEN}cargo auto github_new_release{RESET} - {YELLOW}creates new release on github{RESET}
+    {YELLOW}This task needs the Personal Access Token Classic from <https://github.com/settings/tokens>{RESET}
 
     {YELLOW}© 2024 bestia.dev  MIT License github.com/automation-tasks-rs/cargo-auto{RESET}
 "#
@@ -87,12 +89,15 @@ fn print_help() {
 }
 
 /// all example commands in one place
-fn print_examples_cmd(){
-/*
-    println!(r#"{YELLOW}run examples:{RESET}
-{GREEN}cargo run --example example1{RESET}
-"#);
-*/
+fn print_examples_cmd() {
+    /*
+        println!(
+            r#"
+        {YELLOW}run examples:{RESET}
+    {GREEN}cargo run --example plantuml1{RESET}
+    "#
+        );
+    */
 }
 
 /// sub-command for bash auto-completion of `cargo auto` using the crate `dev_bestia_cargo_completion`
@@ -131,7 +136,7 @@ fn task_build() {
 {GREEN}./target/debug/{package_name} arg_1{RESET}
     {YELLOW}if ok then{RESET}
 {GREEN}cargo auto release{RESET}
-    "#,
+"#,
 package_name = cargo_toml.package_name(),
     );
     print_examples_cmd();
@@ -158,7 +163,7 @@ fn task_release() {
 {GREEN}./target/release/{package_name} arg_1{RESET}
     {YELLOW}if ok then{RESET}
 {GREEN}cargo auto doc{RESET}
-    "#,
+"#,
 package_name = cargo_toml.package_name(),
     );
     print_examples_cmd();
@@ -203,8 +208,8 @@ fn task_test() {
     println!(
 r#"
     {YELLOW}After `cargo auto test`. If ok then {RESET}
+    {YELLOW}(commit message is mandatory){RESET}
 {GREEN}cargo auto commit_and_push "message"{RESET}
-    {YELLOW}with mandatory commit message{RESET}
 "#
     );
 }
@@ -212,10 +217,13 @@ r#"
 /// commit and push
 fn task_commit_and_push(arg_2: Option<String>) {
     let Some(message) = arg_2 else {
-        eprintln!("{RED}Error: Message for commit is mandatory. Exiting.{RESET}");
+        eprintln!("{RED}Error: Message for commit is mandatory. Exiting...{RESET}");
         // early exit
         return;
     };
+
+    // if description or topics/keywords/tags have changed
+    cl::description_and_topics_to_github();
 
     // init repository if needed. If it is not init then normal commit and push.
     if !cl::init_repository_if_needed(&message) {
@@ -227,6 +235,7 @@ fn task_commit_and_push(arg_2: Option<String>) {
         // the real commit of code
         cl::run_shell_command(&format!( r#"git add -A && git diff --staged --quiet || git commit -m "{message}" "#));
         cl::run_shell_command("git push");
+
         println!(
 r#"
     {YELLOW}After `cargo auto commit_and_push "message"`{RESET}
@@ -238,30 +247,28 @@ r#"
 
 /// publish to crates.io and git tag
 fn task_publish_to_crates_io() {
-    println!(r#"{YELLOW}The crates.io access token must already be saved locally with `cargo login TOKEN`{RESET}"#);
-
     let cargo_toml = cl::CargoToml::read();
-    // git tag
-    let shell_command = format!(
-        "git tag -f -a v{version} -m version_{version}",
-        version = cargo_toml.package_version()
-    );
-    cl::run_shell_command(&shell_command);
+    let package_name = cargo_toml.package_name();
+    let version = cargo_toml.package_version();
+    // take care of tags
+    let tag_name_version = cl::git_tag_sync_check_create_push(&version);
 
-    // cargo publish
-    cl::run_shell_command("cargo publish");
+    // cargo publish with encrypted secret token
+    cl::publish_to_crates_io_with_secret_token();
+
     println!(
         r#"
     {YELLOW}After `cargo auto publish_to_crates_io`, check in browser{RESET}
 {GREEN}https://crates.io/crates/{package_name}{RESET}
-    {YELLOW}Install the crate with {RESET}
+    {YELLOW}Install the crate with{RESET}
 {GREEN}cargo install {package_name}{RESET}
     {YELLOW}and check how it works.{RESET}
-    {YELLOW}Then create the GitHub-Release and upload the assets.{RESET}    
+
+    {YELLOW}First write the content of the release in the RELEASES.md in the `## Unreleased` section, then{RESET}
+    {YELLOW}Then create the GitHub-Release for {tag_name_version}.{RESET}
+    {YELLOW}And upload the assets (compressed files).{RESET}
 {GREEN}cargo auto github_new_release{RESET}
-"#,
-        package_name = cargo_toml.package_name(),
-        // package_version = cargo_toml.package_version()
+"#
     );
 }
 
