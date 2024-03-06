@@ -1,4 +1,54 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src/main.rs`."><title>main.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../../static.files/rustdoc-c4dbdcde0fbd8430.css" id="mainThemeStyle"><link rel="stylesheet" id="themeStyle" href="../../static.files/light-db279b6232be9c13.css"><link rel="stylesheet" disabled href="../../static.files/dark-cf923f49f397b216.css"><link rel="stylesheet" disabled href="../../static.files/ayu-be46fdc453a55015.css"><script src="../../static.files/storage-3891ce972e3a2bf8.js"></script><script defer src="../../static.files/source-script-1b95b7cca98b26e5.js"></script><script defer src="../../source-files.js"></script><script defer src="../../static.files/main-98a684e84ae5b08b.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-13285aec31fa243e.css"></noscript><link rel="alternate icon" type="image/png" href="../../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"></nav><main><nav class="sub"><a class="sub-logo-container" href="../../dev_bestia_cargo_completion/index.html"><img class="rust-logo" src="../../static.files/rust-logo-151179464ae7ed46.svg" alt="logo"></a><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="example-wrap"><pre class="src-line-numbers"><a href="#1" id="1">1</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="rustdoc">
+  <meta name="description" content="Source of the Rust file `src/main.rs`.">
+  <title>main.rs - source</title>
+  <link rel="preload" as="font" type="font/woff2" crossorigin="" href="../../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin="" href="../../static.files/FiraSans-Regular-018c141bf0843ffd.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin="" href="../../static.files/FiraSans-Medium-8f9a781e4970d388.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin="" href="../../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin="" href="../../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2">
+  <link rel="stylesheet" href="../../static.files/normalize-76eba96aa4d2e634.css">
+  <link rel="stylesheet" href="../../static.files/rustdoc-ac92e1bbe349e143.css">
+  <meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="dev_bestia_cargo_completion" data-themes=""
+  data-resource-suffix="" data-rustdoc-version="1.76.0 (07dca489a 2024-02-04)" data-channel="1.76.0" data-search-js="search-2b6ce74ff89ae146.js"
+  data-settings-js="settings-4313503d2e1961c2.js">
+  <script src="../../static.files/storage-f2adc0d6ca4d09fb.js"></script>
+  <script defer src="../../static.files/src-script-39ed315d46fb705f.js"></script>
+  <script defer src="../../src-files.js"></script>
+  <script defer src="../../static.files/main-305769736d49e732.js"></script><noscript>
+  <link rel="stylesheet" href="../../static.files/noscript-feafe1bb7466e4bd.css"></noscript>
+  <link rel="alternate icon" type="image/png" href="../../static.files/favicon-16x16-8b506e7a72182f1c.png">
+  <link rel="alternate icon" type="image/png" href="../../static.files/favicon-32x32-422f7d1d52889060.png">
+  <link rel="icon" type="image/svg+xml" href="../../static.files/favicon-2c020d218678b618.svg">
+</head>
+<body class="rustdoc src">
+  <!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+  <nav class="sidebar"></nav>
+  <div class="sidebar-resizer"></div>
+  <main>
+    <nav class="sub">
+      <a class="sub-logo-container" href="../../dev_bestia_cargo_completion/index.html"><img src=
+      "https://github.com/automation-tasks-rs/cargo-auto/raw/main/images/logo/logo_cargo_auto.svg" alt="dev_bestia_cargo_completion"></a>
+      <form class="search-form">
+        <input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder=
+        "Click or press ‘S’ to search, ‘?’ for more options…" type="search">
+        <div id="help-button" tabindex="-1">
+          <a href="../../help.html" title="help">?</a>
+        </div>
+        <div id="settings-menu" tabindex="-1">
+          <a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src=
+          "../../static.files/wheel-7b819b6101059cd0.svg"></a>
+        </div>
+      </form>
+    </nav>
+    <section id="main-content" class="content">
+      <div class="example-wrap">
+        <div data-nosnippet="">
+          <pre class="src-line-numbers"><a href="#1" id="1">1</a>
 <a href="#2" id="2">2</a>
 <a href="#3" id="3">3</a>
 <a href="#4" id="4">4</a>
@@ -176,37 +226,44 @@
 <a href="#176" id="176">176</a>
 <a href="#177" id="177">177</a>
 <a href="#178" id="178">178</a>
-<a href="#179" id="179">179</a>
-<a href="#180" id="180">180</a>
-<a href="#181" id="181">181</a>
-<a href="#182" id="182">182</a>
-<a href="#183" id="183">183</a>
-<a href="#184" id="184">184</a>
-<a href="#185" id="185">185</a>
-<a href="#186" id="186">186</a>
-<a href="#187" id="187">187</a>
-</pre><pre class="rust"><code><span class="comment">// region: auto_md_to_doc_comments include README.md A //!
+</pre>
+        </div>
+        <pre class="rust"><code><span class="comment">// dev_bestia_cargo_completion/src/main.rs
+
+// logo for docs.rs in png
+</span><span class="attr">#![doc(html_logo_url = <span class=
+"string">"https://github.com/automation-tasks-rs/cargo-auto/raw/main/images/logo/logo_cargo_auto.svg"</span>)]
+
+</span><span class="comment">// region: auto_md_to_doc_comments include README.md A //!
 </span><span class="doccomment">//! # dev_bestia_cargo_completion  
 //!
-//! **Full auto-completion for cargo-auto and automation_tasks_rs and partial auto-completion for cargo  in bash**  
-//! ***version: 2023.531.1119 date: 2023-05-31 author: [bestia.dev](https://bestia.dev) repository: [Github](https://github.com/bestia-dev/dev_bestia_cargo_completion)***  
+//! **Auto-completion for cargo-auto and automation_tasks_rs and partial auto-completion for cargo in bash**  
+//! ***version: 2024.306.2155 date: 2024-03-06 author: [bestia.dev](https://bestia.dev) repository: [GitHub](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion)***
 //!
-//! [![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-57-green.svg)](https://github.com/bestia-dev/dev_bestia_cargo_completion/)
-//! [![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-96-blue.svg)](https://github.com/bestia-dev/dev_bestia_cargo_completion/)
-//! [![Lines in Comments](https://img.shields.io/badge/Lines_in_comments-21-purple.svg)](https://github.com/bestia-dev/dev_bestia_cargo_completion/)
-//! [![Lines in examples](https://img.shields.io/badge/Lines_in_examples-0-yellow.svg)](https://github.com/bestia-dev/dev_bestia_cargo_completion/)
-//! [![Lines in tests](https://img.shields.io/badge/Lines_in_tests-0-orange.svg)](https://github.com/bestia-dev/dev_bestia_cargo_completion/)
+//!  ![maintained](https://img.shields.io/badge/maintained-green)
+//!  ![ready-for-use](https://img.shields.io/badge/ready_for_use-green)
+//!  ![rustlang](https://img.shields.io/badge/rustlang-orange)
+//!  ![cargo-auto](https://img.shields.io/badge/cargo_auto-orange)
 //!
-//! [![crates.io](https://img.shields.io/crates/v/dev_bestia_cargo_completion.svg)](https://crates.io/crates/dev_bestia_cargo_completion)
-//! [![Documentation](https://docs.rs/dev_bestia_cargo_completion/badge.svg)](https://docs.rs/dev_bestia_cargo_completion/)
-//! [![crev reviews](https://web.crev.dev/rust-reviews/badge/crev_count/dev_bestia_cargo_completion.svg)](https://web.crev.dev/rust-reviews/crate/dev_bestia_cargo_completion/)
-//! [![Lib.rs](https://img.shields.io/badge/Lib.rs-rust-orange.svg)](https://lib.rs/crates/dev_bestia_cargo_completion/)
-//! [![Licence](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/bestia-dev/dev_bestia_cargo_completion/blob/master/LICENSE)
-//! [![Rust](https://github.com/bestia-dev/dev_bestia_cargo_completion/workflows/RustAction/badge.svg)](https://github.com/bestia-dev/dev_bestia_cargo_completion/)
-//! ![Hits](https://bestia.dev/webpage_hit_counter/get_svg_image/710310517.svg)
+//!  ![logo](https://raw.githubusercontent.com/automation-tasks-rs/cargo-auto/main/images/logo/logo_cargo_auto.svg)
+//!  dev_bestia_cargo_completion is part of [automation_tasks_rs](https://github.com/automation-tasks-rs) project
+//!
+//! [![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-55-green.svg)](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/)
+//! [![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-0-blue.svg)](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/)
+//! [![Lines in Comments](https://img.shields.io/badge/Lines_in_comments-23-purple.svg)](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/)
+//! [![Lines in examples](https://img.shields.io/badge/Lines_in_examples-0-yellow.svg)](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/)
+//! [![Lines in tests](https://img.shields.io/badge/Lines_in_tests-0-orange.svg)](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/)
+//!
+//!  [![crates.io](https://img.shields.io/crates/v/dev_bestia_cargo_completion.svg)](https://crates.io/crates/dev_bestia_cargo_completion)
+//!  [![Documentation](https://docs.rs/dev_bestia_cargo_completion/badge.svg)](https://docs.rs/dev_bestia_cargo_completion/)
+//!  [![crev reviews](https://web.crev.dev/rust-reviews/badge/crev_count/dev_bestia_cargo_completion.svg)](https://web.crev.dev/rust-reviews/crate/dev_bestia_cargo_completion/)
+//!  [![Lib.rs](https://img.shields.io/badge/Lib.rs-rust-orange.svg)](https://lib.rs/crates/dev_bestia_cargo_completion/)
+//!  [![Licence](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/blob/master/LICENSE)
+//!  [![Rust](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/workflows/RustAction/badge.svg)](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/)
+//!  ![dev_bestia_cargo_completion](https://bestia.dev/webpage_hit_counter/get_svg_image/710310517.svg)
 //!
 //! Hashtags: #rustlang #buildtool #developmenttool  
-//! My projects on Github are more like a tutorial than a finished product: [bestia-dev tutorials](https://github.com/bestia-dev/tutorials_rust_wasm).
+//! My projects on Github are more like a tutorial than a finished product: [bestia-dev tutorials](https://github.com/automation-tasks-rs/tutorials_rust_wasm).
 //!
 //! ## Try it
 //!
@@ -219,7 +276,7 @@
 //! Save definition for auto_completion in bash:
 //!
 //! ```bash
-//! complete -C &quot;dev_bestia_cargo_completion&quot; cargo
+//! complete -C "dev_bestia_cargo_completion" cargo
 //! ```
 //!
 //! Start typing `cargo b` and press `tab`.  
@@ -231,7 +288,7 @@
 //! Auto-completion in Debian bash is a great tool. You type the first letters, press tab and the word is auto-completed.  
 //! Bash can call an executable binary to return the available words. So it can be written in Rust. This can produce even better results as known as `dynamic auto-completion`.  
 //! For my knowledge `cargo` does not have auto-completion yet. There are many plans. It can take some time.  
-//! I will build what I need now. Something simple. It doesn&#39;t need to be perfect.  
+//! I will build what I need now. Something simple. It doesn't need to be perfect.  
 //! This is a great blog:  
 //! &lt;https://www.joshmcguigan.com/blog/shell-completions-pure-rust/&gt;
 //!
@@ -246,40 +303,24 @@
 //! # delete a definition
 //! complete -r cargo
 //! # define a binary to auto-complete the command
-//! complete -C &quot;binary&quot; command
+//! complete -C "binary" command
 //! # for example
-//! complete -C &quot;dev_bestia_cargo_completion&quot; cargo
+//! complete -C "dev_bestia_cargo_completion" cargo
 //! ```
 //!
-//! ## development
+//! ## Development details
 //!
-//! I choose this long name for my crate, because cargo-completion is a hot topic. Sooner or later someone will build it - officially. This is why I added the prefix `dev_bestia_`, because my web domain is [bestia.dev](https://bestia.dev). This way I have the guarantee of a unique name and leave the short name to the future official version.  
-//! Run
+//! Read the development details in a separate md file:  
+//! [DEVELOPMENT.md](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/blob/main/DEVELOPMENT.md)
 //!
-//! ```bash
-//! cargo install cargo-auto
-//! ```
+//! ## Releases changelog
 //!
-//! and then list the user-defined automation tasks with
+//! Read the changelog in a separate md file:  
+//! [RELEASES.md](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/blob/main/RELEASES.md)
 //!
-//! ```bash
-//! cargo auto
-//! ```  
+//! ## TODO
 //!
-//! You can change the definition for bash auto-completion to point to the compilation of this project in development. So you can easy test the auto-completion while developing it.
-//!
-//! ```bash
-//! complete -C &quot;/home/luciano/rustprojects/dev_bestia_cargo_completion/target/debug/dev_bestia_cargo_completion&quot; cargo
-//! ```
-//!
-//! ## cargo crev reviews and advisory
-//!
-//! We leave in times of danger with [supply chain attacks](https://en.wikipedia.org/wiki/Supply_chain_attack).  
-//! It is recommended to always use [cargo-crev](https://github.com/crev-dev/cargo-crev)  
-//! to verify the trustworthiness of each of your dependencies.  
-//! Please, spread this info.  
-//! You can also read reviews quickly on the web. Example for the crate `num-traits`:  
-//! &lt;https://web.crev.dev/rust-reviews/crate/num-traits/&gt;  
+//! Nothing big in the near future.
 //!
 //! ## Open-source and free as a beer
 //!
@@ -300,60 +341,57 @@
 // region: use statements
 // use lazy_static::lazy_static;
 </span><span class="kw">use </span>std::{env, path::Path, vec};
-<span class="kw">use </span>unwrap::unwrap;
 <span class="comment">// endregion
 
 </span><span class="kw">fn </span>main() {
     <span class="comment">// region: Environment Variables
     // COMP_LINE - the full text that the user has entered
     // COMP_POINT - the cursor position (a numeric index into COMP_LINE)¸
-    </span><span class="kw">let </span>comp_line = <span class="macro">unwrap!</span>(env::var(<span class="string">&quot;COMP_LINE&quot;</span>));
-    <span class="kw">let </span>_comp_point = <span class="macro">unwrap!</span>(<span class="macro">unwrap!</span>(env::var(<span class="string">&quot;COMP_POINT&quot;</span>)).parse::&lt;usize&gt;());
-    <span class="kw">let </span>vec_comp_line: Vec&lt;<span class="kw-2">&amp;</span>str&gt; = comp_line.split_whitespace().collect();
+    </span><span class="kw">let </span>comp_line = env::var(<span class="string">"COMP_LINE"</span>).unwrap();
+    <span class="kw">let </span>_comp_point = env::var(<span class="string">"COMP_POINT"</span>).unwrap().parse::&lt;usize&gt;().unwrap();
+    <span class="kw">let </span>vec_comp_line: Vec&lt;<span class="kw-2">&</span>str&gt; = comp_line.split_whitespace().collect();
     <span class="comment">// endregion: Environment Variable
 
     // region: CLI arguments
     </span><span class="kw">let </span>args: Vec&lt;String&gt; = env::args().collect();
     <span class="comment">// args[2] - the word we are completing
-    </span><span class="kw">let </span>word_being_completed = <span class="kw-2">&amp;</span>args[<span class="number">2</span>];
+    </span><span class="kw">let </span>word_being_completed = <span class="kw-2">&</span>args[<span class="number">2</span>];
     <span class="comment">// args[3] - the last word before that
-    </span><span class="kw">let </span>last_word = <span class="kw-2">&amp;</span>args[<span class="number">3</span>];
+    </span><span class="kw">let </span>last_word = <span class="kw-2">&</span>args[<span class="number">3</span>];
     <span class="comment">// endregion: CLI arguments
 
     // first word after `cargo`
-    </span><span class="kw">if </span>vec_comp_line.len() &lt;= <span class="number">2 </span>&amp;&amp; last_word == <span class="string">&quot;cargo&quot; </span>{
-        <span class="kw">let </span>sub_commands_after_cargo = <span class="macro">vec!</span>[
-            <span class="string">&quot;auto&quot;</span>, <span class="string">&quot;build&quot;</span>, <span class="string">&quot;check&quot;</span>, <span class="string">&quot;new&quot;</span>, <span class="string">&quot;doc&quot;</span>, <span class="string">&quot;test&quot;</span>, <span class="string">&quot;fmt&quot;</span>, <span class="string">&quot;install&quot;</span>,
-        ];
+    </span><span class="kw">if </span>vec_comp_line.len() &lt;= <span class="number">2 </span>&amp;& last_word == <span class="string">"cargo" </span>{
+        <span class="kw">let </span>sub_commands_after_cargo = <span class="macro">vec!</span>[<span class="string">"auto"</span>, <span class=
+"string">"build"</span>, <span class="string">"check"</span>, <span class="string">"new"</span>, <span class="string">"doc"</span>, <span class=
+"string">"test"</span>, <span class="string">"fmt"</span>, <span class="string">"install"</span>];
         <span class="kw">for </span>sub_command <span class="kw">in </span>sub_commands_after_cargo {
             <span class="comment">// list all for `tab tab` or list only one starting with the word
             </span><span class="kw">if </span>vec_comp_line.len() == <span class="number">1 </span>|| sub_command.starts_with(word_being_completed) {
-                <span class="macro">println!</span>(<span class="string">&quot;{}&quot;</span>, sub_command);
+                <span class="macro">println!</span>(<span class="string">"{}"</span>, sub_command);
             }
         }
     }
     <span class="comment">// the first word after `cargo build`
-    </span><span class="kw">else if </span>vec_comp_line.len() &lt;= <span class="number">3
-        </span>&amp;&amp; last_word == <span class="string">&quot;build&quot;
-        </span>&amp;&amp; comp_line.starts_with(<span class="string">&quot;cargo build&quot;</span>)
-    {
-        <span class="kw">let </span>sub_commands = <span class="macro">vec!</span>[<span class="string">&quot;--release&quot;</span>];
+    </span><span class="kw">else if </span>vec_comp_line.len() &lt;= <span class="number">3 </span>&amp;& last_word == <span class=
+"string">"build" </span>&amp;& comp_line.starts_with(<span class="string">"cargo build"</span>) {
+        <span class="kw">let </span>sub_commands = <span class="macro">vec!</span>[<span class="string">"--release"</span>];
 
         <span class="kw">for </span>sub_command <span class="kw">in </span>sub_commands {
             <span class="comment">// list all for `tab tab` or list only one starting with the word
             </span><span class="kw">if </span>vec_comp_line.len() == <span class="number">2 </span>|| sub_command.starts_with(word_being_completed) {
-                <span class="macro">println!</span>(<span class="string">&quot;{}&quot;</span>, sub_command);
+                <span class="macro">println!</span>(<span class="string">"{}"</span>, sub_command);
             }
         }
-    } <span class="kw">else if </span>comp_line.starts_with(<span class="string">&quot;cargo auto&quot;</span>) {
+    } <span class="kw">else if </span>comp_line.starts_with(<span class="string">"cargo auto"</span>) {
         <span class="comment">// words after `cargo auto` execute the appropriate binary, that responds with println
-        // 1st argument in &quot;completion&quot;
+        // 1st argument in "completion"
         // 2rd argument is the `word_being_completed`
         // 3nd argument is the `last_word`
-        </span><span class="kw">let </span>path_to_automation = <span class="string">&quot;automation_tasks_rs/target/debug/automation_tasks_rs&quot;</span>;
+        </span><span class="kw">let </span>path_to_automation = <span class="string">"automation_tasks_rs/target/debug/automation_tasks_rs"</span>;
         <span class="kw">if </span>Path::new(path_to_automation).exists() {
             std::process::Command::new(path_to_automation)
-                .arg(<span class="string">&quot;completion&quot;</span>)
+                .arg(<span class="string">"completion"</span>)
                 .arg(word_being_completed)
                 .arg(last_word)
                 .spawn()
@@ -361,8 +399,8 @@
                 .wait()
                 .unwrap();
         } <span class="kw">else </span>{
-            std::process::Command::new(<span class="string">&quot;cargo-auto&quot;</span>)
-                .arg(<span class="string">&quot;completion&quot;</span>)
+            std::process::Command::new(<span class="string">"cargo-auto"</span>)
+                .arg(<span class="string">"completion"</span>)
                 .arg(word_being_completed)
                 .arg(last_word)
                 .spawn()
@@ -372,5 +410,9 @@
         }
     }
 }
-</code></pre></div>
-</section></main><div id="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="dev_bestia_cargo_completion" data-themes="" data-resource-suffix="" data-rustdoc-version="1.69.0 (84c898d65 2023-04-16)" data-search-js="search-8a59a8356673ec1f.js" data-settings-js="settings-f0c5c39777a9a2f6.js" data-settings-css="settings-0bcba95ff279c1db.css" ></div></body></html>
+</code></pre>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
