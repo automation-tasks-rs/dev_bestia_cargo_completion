@@ -5,7 +5,7 @@
 [//]: # (auto_cargo_toml_to_md start)
 
 **Auto-completion for cargo-auto and automation_tasks_rs and partial auto-completion for cargo in bash**  
-***version: 2024.307.1909 date: 2024-03-07 author: [bestia.dev](https://bestia.dev) repository: [GitHub](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion)***
+***version: 2024.307.1911 date: 2024-03-07 author: [bestia.dev](https://bestia.dev) repository: [GitHub](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion)***
 
  ![maintained](https://img.shields.io/badge/maintained-green)
  ![ready-for-use](https://img.shields.io/badge/ready_for_use-green)
@@ -30,7 +30,7 @@
 
 [//]: # (auto_lines_of_code start)
 [![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-71-green.svg)](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/)
-[![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-214-blue.svg)](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/)
+[![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-222-blue.svg)](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/)
 [![Lines in Comments](https://img.shields.io/badge/Lines_in_comments-20-purple.svg)](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/)
 [![Lines in examples](https://img.shields.io/badge/Lines_in_examples-0-yellow.svg)](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/)
 [![Lines in tests](https://img.shields.io/badge/Lines_in_tests-0-orange.svg)](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/)

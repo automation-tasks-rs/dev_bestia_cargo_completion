@@ -217,9 +217,9 @@ checksum = "c59e92b5a388f549b863a7bea62612c09f24c8393560709a54558a9abdfb3b9c"
 
 [[package]]
 name = "cargo_auto_lib"
-version = "1.4.4"
+version = "2.0.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0a7beadcced108bac4b6cc7c78028f16eae954ae40773afd4b2a76cb9a87a0e3"
+checksum = "544ee42a9cd6569b0347973bbebaae0fd96e582d60affb762bb5dac2050b66b4"
 dependencies = [
  "aes-gcm",
  "anyhow",

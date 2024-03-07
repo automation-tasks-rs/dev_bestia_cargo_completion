@@ -2,11 +2,11 @@
   "vec_file_metadata": [
     {
       "filename": "automation_tasks_rs/Cargo.toml",
-      "filehash": "d6430997ddff8af4dc1b610f160e80e8aa6842b706bb30cbfacc5aa1274c3ba4"
+      "filehash": "f65b4cd2d4d21c27e9c23217b522990c8a3a73498ec207a5737b69525056243a"
     },
     {
       "filename": "automation_tasks_rs/target/debug/automation_tasks_rs",
-      "filehash": "d52f71d0ae2f61ec02b64c10e3ea74a0403c8d26c53fceece69b57b8888d72de"
+      "filehash": "47d8f552772ab25061bb027b87c2060d991f86695156804a1e3cf740cc4fa167"
     },
     {
       "filename": "automation_tasks_rs/src/main.rs",
