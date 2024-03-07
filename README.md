@@ -5,26 +5,26 @@
 [//]: # (auto_cargo_toml_to_md start)
 
 **Auto-completion for cargo-auto and automation_tasks_rs and partial auto-completion for cargo in bash**  
-***version: 2024.306.2322 date: 2024-03-06 author: [bestia.dev](https://bestia.dev) repository: [GitHub](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion)***
+***version: 2024.307.1909 date: 2024-03-07 author: [bestia.dev](https://bestia.dev) repository: [GitHub](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion)***
 
  ![maintained](https://img.shields.io/badge/maintained-green)
  ![ready-for-use](https://img.shields.io/badge/ready_for_use-green)
  ![rustlang](https://img.shields.io/badge/rustlang-orange)
- ![cargo-auto](https://img.shields.io/badge/cargo_auto-orange)
+ ![automation](https://img.shields.io/badge/automation-orange)
+ ![workflow](https://img.shields.io/badge/workflow-orange)
 
 [//]: # (auto_cargo_toml_to_md end)
 
  ![logo](https://raw.githubusercontent.com/automation-tasks-rs/cargo-auto/main/images/logo/logo_cargo_auto.svg)
- dev_bestia_cargo_completion is part of [automation_tasks_rs](https://github.com/automation-tasks-rs) project
+ dev_bestia_cargo_completion is part of the [automation_tasks_rs](https://github.com/automation-tasks-rs) project
 
  [![crates.io](https://img.shields.io/crates/v/dev_bestia_cargo_completion.svg)](https://crates.io/crates/dev_bestia_cargo_completion)
  [![Documentation](https://docs.rs/dev_bestia_cargo_completion/badge.svg)](https://docs.rs/dev_bestia_cargo_completion/)
  [![crev reviews](https://web.crev.dev/rust-reviews/badge/crev_count/dev_bestia_cargo_completion.svg)](https://web.crev.dev/rust-reviews/crate/dev_bestia_cargo_completion/)
- [![Lib.rs](https://img.shields.io/badge/Lib.rs-rust-orange.svg)](https://lib.rs/crates/dev_bestia_cargo_completion/)
-
+ [![Lib.rs](https://img.shields.io/badge/Lib.rs-rust-orange.svg)](https://lib.rs/crates/dev_bestia_cargo_completion/)  
  [![Licence](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/blob/master/LICENSE)
  [![Rust](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/workflows/rust_fmt_auto_build_test/badge.svg)](https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/)
- [![Newest docs](https://img.shields.io/badge/newest_docs-brown.svg)](https://automation-tasks-rs.github.io/dev_bestia_cargo_completion/dev_bestia_cargo_completion/index.html)
+ [![Newest docs](https://img.shields.io/badge/newest_docs-blue.svg)](https://automation-tasks-rs.github.io/dev_bestia_cargo_completion/dev_bestia_cargo_completion/index.html)
  ![dev_bestia_cargo_completion](https://bestia.dev/webpage_hit_counter/get_svg_image/710310517.svg)
 
 
@@ -37,8 +37,9 @@
 
 [//]: # (auto_lines_of_code end)
 
-Hashtags: #rustlang #buildtool #developmenttool  
-My projects on GitHub are more like a tutorial than a finished product: [bestia-dev tutorials](https://github.com/automation-tasks-rs/tutorials_rust_wasm).
+Hashtags: #maintained #ready-for-use #rustlang #automation #workflow  
+My projects on GitHub are more like a tutorial than a finished product: [bestia-dev tutorials](https://github.com/bestia-dev/tutorials_rust_wasm).  
+I recommend using the [CRDE - Containerized Rust Development Environment](https://github.com/automation-tasks-rs/docker_rust_development) to write Rust projects on Linux, isolated from your system.  
 
 ## Try it
 
@@ -70,7 +71,7 @@ This is a great blog:
 ## complete, the Linux command
 
 The Linux command `complete` adds auto_completion definitions to bash.  
-But it is only for the current session. If you want to make it persistent add it to you `~/.bashrc` file. Or to some other file that runs commands on initialization of the bash.  
+But it is only for the current session. If you want to make it persistent add it to the `~/.bashrc` file.  
 
 ```bash
 # list the definitions
