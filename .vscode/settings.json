@@ -18,6 +18,13 @@
     },
     "rust-analyzer.showUnlinkedFileNotification": false,
     "cSpell.words": [
+        "thiserror",
+        "substack",
+        "struct",
+        "Prost",
+        "Nazdravlje",
+        "bestiadev",
+        "Alla",
         "bestia",
         "buildtool",
         "CRUSTDE",
