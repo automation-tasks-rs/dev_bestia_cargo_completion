@@ -1,57 +1,68 @@
 ./docs/help.html
 Document: "2" is not a file!
 
+line 1 column 2097 - Warning: trimming empty <button>
 line 2 column 81 - Warning: trimming empty <span>
+./docs/dev_bestia_cargo_completion/all.html
+Document: "2" is not a file!
+
+line 1 column 2145 - Warning: trimming empty <button>
+line 2 column 81 - Warning: trimming empty <span>
+./docs/dev_bestia_cargo_completion/fn.main.html
+Document: "2" is not a file!
+
+line 1 column 2246 - Warning: trimming empty <button>
+line 2 column 81 - Warning: trimming empty <span>
+./docs/dev_bestia_cargo_completion/index.html
+Document: "2" is not a file!
+
+line 1 column 2188 - Warning: trimming empty <button>
+line 3 column 81 - Warning: trimming empty <span>
+./docs/src/dev_bestia_cargo_completion/main.rs.html
+Document: "2" is not a file!
+
+line 3 column 54 - Warning: trimming empty <span>
+./docs/src/dev_bestia_cargo_completion_lib/lib.rs.html
+Document: "2" is not a file!
+
+line 3 column 54 - Warning: trimming empty <span>
 ./docs/dev_bestia_cargo_completion_lib/all.html
 Document: "2" is not a file!
 
+line 1 column 2149 - Warning: trimming empty <button>
 line 2 column 81 - Warning: trimming empty <span>
 ./docs/dev_bestia_cargo_completion_lib/fn.complete_automation.html
 Document: "2" is not a file!
 
+line 1 column 2376 - Warning: trimming empty <button>
 line 2 column 81 - Warning: trimming empty <span>
-./docs/dev_bestia_cargo_completion_lib/fn.complete_cargo_auto.html
-Document: "2" is not a file!
-
-line 2 column 81 - Warning: trimming empty <span>
-./docs/dev_bestia_cargo_completion_lib/index.html
-Document: "2" is not a file!
-
-line 3 column 81 - Warning: trimming empty <span>
 ./docs/dev_bestia_cargo_completion_lib/fn.complete_cargo_build_partial.html
 Document: "2" is not a file!
 
+line 1 column 2274 - Warning: trimming empty <button>
 line 2 column 81 - Warning: trimming empty <span>
 ./docs/dev_bestia_cargo_completion_lib/fn.complete_cargo_partial.html
 Document: "2" is not a file!
 
+line 1 column 2256 - Warning: trimming empty <button>
 line 2 column 81 - Warning: trimming empty <span>
-./docs/src/dev_bestia_cargo_completion_lib/lib.rs.html
+./docs/dev_bestia_cargo_completion_lib/index.html
 Document: "2" is not a file!
 
-line 2 column 284 - Warning: trimming empty <span>
-./docs/src/dev_bestia_cargo_completion/main.rs.html
+line 1 column 2196 - Warning: trimming empty <button>
+line 3 column 81 - Warning: trimming empty <span>
+./docs/dev_bestia_cargo_completion_lib/fn.complete_cargo_auto.html
 Document: "2" is not a file!
 
-line 2 column 276 - Warning: trimming empty <span>
+line 1 column 2376 - Warning: trimming empty <button>
+line 2 column 81 - Warning: trimming empty <span>
+./docs/settings.html
+Document: "2" is not a file!
+
+line 1 column 2095 - Warning: trimming empty <button>
+line 2 column 81 - Warning: trimming empty <span>
 ./docs/index.html
 Document: "2" is not a file!
 
 line 1 column 1 - Warning: missing <!DOCTYPE> declaration
 line 1 column 1 - Warning: inserting missing 'title' element
-./docs/dev_bestia_cargo_completion/all.html
-Document: "2" is not a file!
-
-line 2 column 81 - Warning: trimming empty <span>
-./docs/dev_bestia_cargo_completion/index.html
-Document: "2" is not a file!
-
-line 3 column 81 - Warning: trimming empty <span>
-./docs/dev_bestia_cargo_completion/fn.main.html
-Document: "2" is not a file!
-
-line 2 column 81 - Warning: trimming empty <span>
-./docs/settings.html
-Document: "2" is not a file!
-
-line 2 column 81 - Warning: trimming empty <span>
