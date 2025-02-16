@@ -354,7 +354,7 @@ pub(crate) mod github_mod {
                 github_client
             }
 
-            let encrypted_string_file_path = camino::Utf8Path::new("~/.ssh/github_api_token_encrypted.txt");
+            let encrypted_string_file_path = camino::Utf8Path::new("~/.ssh/github_api_token_ssh_1.enc");
             let encrypted_string_file_path_expanded = cargo_auto_encrypt_secret_lib::file_path_home_expand(encrypted_string_file_path);
 
             let identity_file_path = camino::Utf8Path::new("~/.ssh/github_api_token_ssh_1");
@@ -542,7 +542,7 @@ pub(crate) mod crates_io_mod {
                 crates_io_client
             }
 
-            let encrypted_string_file_path = camino::Utf8Path::new("~/.ssh/crates_io_token_encrypted.txt");
+            let encrypted_string_file_path = camino::Utf8Path::new("~/.ssh/crates_io_token.enc");
             let encrypted_string_file_path_expanded = cargo_auto_encrypt_secret_lib::file_path_home_expand(encrypted_string_file_path);
 
             let identity_file_path = camino::Utf8Path::new("~/.ssh/crates_io_token_ssh_1");
