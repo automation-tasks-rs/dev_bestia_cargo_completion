@@ -1,190 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="generator" content="rustdoc">
-  <meta name="description" content="dev_bestia_cargo_completion">
-  <title>dev_bestia_cargo_completion - Rust</title>
-  <link rel="preload" as="font" type="font/woff2" crossorigin="" href="../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin="" href="../static.files/FiraSans-Regular-018c141bf0843ffd.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin="" href="../static.files/FiraSans-Medium-8f9a781e4970d388.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin="" href="../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin="" href="../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2">
-  <link rel="stylesheet" href="../static.files/normalize-76eba96aa4d2e634.css">
-  <link rel="stylesheet" href="../static.files/rustdoc-5bc39a1768837dd0.css">
-  <meta name="rustdoc-vars" data-root-path="../" data-static-root-path="../static.files/" data-current-crate="dev_bestia_cargo_completion" data-themes=""
-  data-resource-suffix="" data-rustdoc-version="1.77.1 (7cf61ebde 2024-03-27)" data-channel="1.77.1" data-search-js="search-dd67cee4cfa65049.js"
-  data-settings-js="settings-4313503d2e1961c2.js">
-  <script src="../static.files/storage-4c98445ec4002617.js"></script>
-  <script defer src="../crates.js"></script>
-  <script defer src="../static.files/main-48f368f3872407c8.js"></script><noscript>
-  <link rel="stylesheet" href="../static.files/noscript-04d5337699b92874.css"></noscript>
-  <link rel="alternate icon" type="image/png" href="../static.files/favicon-16x16-8b506e7a72182f1c.png">
-  <link rel="alternate icon" type="image/png" href="../static.files/favicon-32x32-422f7d1d52889060.png">
-  <link rel="icon" type="image/svg+xml" href="../static.files/favicon-2c020d218678b618.svg">
-</head>
-<body class="rustdoc mod crate">
-  <!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
-  <nav class="mobile-topbar">
-    <a class="logo-container" href="../dev_bestia_cargo_completion/index.html"><img src=
-    "https://github.com/automation-tasks-rs/cargo-auto/raw/main/images/logo/logo_cargo_auto.svg" alt=""></a>
-  </nav>
-  <nav class="sidebar">
-    <div class="sidebar-crate">
-      <a class="logo-container" href="../dev_bestia_cargo_completion/index.html"><img src=
-      "https://github.com/automation-tasks-rs/cargo-auto/raw/main/images/logo/logo_cargo_auto.svg" alt="logo"></a>
-      <h2><a href="../dev_bestia_cargo_completion/index.html">dev_bestia_cargo_completion</a><span class="version">2024.421.1905</span></h2>
-    </div>
-    <div class="sidebar-elems">
-      <ul class="block">
-        <li>
-          <a id="all-types" href="all.html">All Items</a>
-        </li>
-      </ul>
-      <section>
-        <ul class="block">
-          <li>
-            <a href="#functions">Functions</a>
-          </li>
-        </ul>
-      </section>
-    </div>
-  </nav>
-  <div class="sidebar-resizer"></div>
-  <main>
-    <div class="width-limiter">
-      <nav class="sub">
-        <form class="search-form">
-          <div id="sidebar-button" tabindex="-1">
-            <a href="../dev_bestia_cargo_completion/all.html" title="show sidebar"></a>
-          </div><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder=
-          "Click or press ‘S’ to search, ‘?’ for more options…" type="search">
-          <div id="help-button" tabindex="-1">
-            <a href="../help.html" title="help">?</a>
-          </div>
-          <div id="settings-menu" tabindex="-1">
-            <a href="../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../static.files/wheel-7b819b6101059cd0.svg"></a>
-          </div>
-        </form>
-      </nav>
-      <section id="main-content" class="content">
-        <div class="main-heading">
-          <h1>Crate <a class="mod" href="#">dev_bestia_cargo_completion</a><button id="copy-path" title="Copy item path to clipboard"><img src=
-          "../static.files/clipboard-7571035ce49a181d.svg" width="19" height="18" alt="Copy item path"></button></h1><span class="out-of-band"><a class="src"
-          href="../src/dev_bestia_cargo_completion/main.rs.html#4-144">source</a> · <button id="toggle-all-docs" title=
-          "collapse all docs">[<span>−</span>]</button></span>
-        </div>
-        <details class="toggle top-doc" open="">
-          <summary class="hideme">
-            <span>Expand description</span>
-          </summary>
-          <div class="docblock">
-            <h2 id="dev_bestia_cargo_completion"><a class="doc-anchor" href="#dev_bestia_cargo_completion">§</a>dev_bestia_cargo_completion</h2>
-            <p><strong>Auto-completion for cargo-auto and automation_tasks_rs and partial auto-completion for cargo in bash</strong><br>
-            <em><strong>version: 2024.421.1905 date: 2024-04-21 author: <a href="https://bestia.dev">bestia.dev</a> repository: <a href=
-            "https://github.com/automation-tasks-rs/dev_bestia_cargo_completion">GitHub</a></strong></em></p>
-            <p><img src="https://img.shields.io/badge/maintained-green" alt="maintained"> <img src="https://img.shields.io/badge/ready_for_use-green" alt=
-            "ready-for-use"> <img src="https://img.shields.io/badge/rustlang-orange" alt="rustlang"> <img src="https://img.shields.io/badge/automation-orange"
-            alt="automation"> <img src="https://img.shields.io/badge/workflow-orange" alt="workflow"></p>
-            <p><img src="https://raw.githubusercontent.com/automation-tasks-rs/cargo-auto/main/images/logo/logo_cargo_auto.svg" alt="logo">
-            dev_bestia_cargo_completion is part of the <a href="https://github.com/automation-tasks-rs">automation_tasks_rs</a> project</p>
-            <p><a href="https://crates.io/crates/dev_bestia_cargo_completion"><img src="https://img.shields.io/crates/v/dev_bestia_cargo_completion.svg" alt=
-            "crates.io"></a> <a href="https://docs.rs/dev_bestia_cargo_completion/"><img src="https://docs.rs/dev_bestia_cargo_completion/badge.svg" alt=
-            "Documentation"></a> <a href="https://web.crev.dev/rust-reviews/crate/dev_bestia_cargo_completion/"><img src=
-            "https://web.crev.dev/rust-reviews/badge/crev_count/dev_bestia_cargo_completion.svg" alt="crev reviews"></a> <a href=
-            "https://lib.rs/crates/dev_bestia_cargo_completion/"><img src="https://img.shields.io/badge/Lib.rs-rust-orange.svg" alt="Lib.rs"></a><br>
-            <a href="https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/blob/master/LICENSE"><img src=
-            "https://img.shields.io/badge/license-MIT-blue.svg" alt="Licence"></a> <a href=
-            "https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/"><img src=
-            "https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/workflows/rust_fmt_auto_build_test/badge.svg" alt="Rust"></a> <a href=
-            "https://automation-tasks-rs.github.io/dev_bestia_cargo_completion/dev_bestia_cargo_completion/index.html"><img src=
-            "https://img.shields.io/badge/newest_docs-blue.svg" alt="Newest docs"></a> <img src=
-            "https://bestia.dev/webpage_hit_counter/get_svg_image/710310517.svg" alt="dev_bestia_cargo_completion"></p>
-            <p><a href="https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/"><img src="https://img.shields.io/badge/Lines_in_Rust-71-green.svg"
-            alt="Lines in Rust code"></a> <a href="https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/"><img src=
-            "https://img.shields.io/badge/Lines_in_Doc_comments-222-blue.svg" alt="Lines in Doc comments"></a> <a href=
-            "https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/"><img src="https://img.shields.io/badge/Lines_in_comments-20-purple.svg" alt=
-            "Lines in Comments"></a> <a href="https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/"><img src=
-            "https://img.shields.io/badge/Lines_in_examples-0-yellow.svg" alt="Lines in examples"></a> <a href=
-            "https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/"><img src="https://img.shields.io/badge/Lines_in_tests-0-orange.svg" alt=
-            "Lines in tests"></a></p>
-            <p>Hashtags: #maintained #ready-for-use #rustlang #automation #workflow<br>
-            My projects on GitHub are more like a tutorial than a finished product: <a href="https://github.com/bestia-dev/tutorials_rust_wasm">bestia-dev
-            tutorials</a>.<br>
-            I recommend using the <a href="https://github.com/CRUSTDE-ContainerizedRustDevEnv/crustde_cnt_img_pod">CRUSTDE - Containerized Rust Development
-            Environment</a> to write Rust projects on Linux, isolated from your system.</p>
-            <h3 id="try-it"><a class="doc-anchor" href="#try-it">§</a>Try it</h3>
-            <p>Install the binary:</p>
-            <div class="example-wrap">
-              <pre class="language-bash"><code>cargo install dev_bestia_cargo_completion
-</code></pre>
-            </div>
-            <p>Save definition for auto_completion in bash:</p>
-            <div class="example-wrap">
-              <pre class="language-bash"><code>complete -C "dev_bestia_cargo_completion" cargo
-</code></pre>
-            </div>
-            <p>Start typing <code>cargo b</code> and press <code>tab</code>.<br>
-            It should auto-complete to <code>cargo build</code>.<br>
-            Congratulation! You just used auto-completion :-)</p>
-            <h3 id="bash-auto-completion"><a class="doc-anchor" href="#bash-auto-completion">§</a>bash auto completion</h3>
-            <p>Auto-completion in Debian bash is a great tool. You type the first letters, press tab and the word is auto-completed.<br>
-            Bash can call an executable binary to return the available words. So it can be written in Rust. This can produce even better results as known as
-            <code>dynamic auto-completion</code>.<br>
-            For my knowledge <code>cargo</code> does not have auto-completion yet. There are many plans. It can take some time.<br>
-            I will build what I need now. Something simple. It doesn’t need to be perfect.<br>
-            This is a great blog:<br>
-            <a href="https://www.joshmcguigan.com/blog/shell-completions-pure-rust/">https://www.joshmcguigan.com/blog/shell-completions-pure-rust/</a></p>
-            <h3 id="complete-the-linux-command"><a class="doc-anchor" href="#complete-the-linux-command">§</a>complete, the Linux command</h3>
-            <p>The Linux command <code>complete</code> adds auto_completion definitions to bash.<br>
-            But it is only for the current session. If you want to make it persistent add it to the <code>~/.bashrc</code> file.</p>
-            <div class="example-wrap">
-              <pre class="language-bash"><code># list the definitions
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="dev_bestia_cargo_completion"><title>dev_bestia_cargo_completion - Rust</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../static.files/rustdoc-46132b98.css"><meta name="rustdoc-vars" data-root-path="../" data-static-root-path="../static.files/" data-current-crate="dev_bestia_cargo_completion" data-themes="" data-resource-suffix="" data-rustdoc-version="1.85.0 (4d91de4e4 2025-02-17)" data-channel="1.85.0" data-search-js="search-75f5ac3e.js" data-settings-js="settings-0f613d39.js" ><script src="../static.files/storage-59e33391.js"></script><script defer src="../crates.js"></script><script defer src="../static.files/main-5f194d8c.js"></script><noscript><link rel="stylesheet" href="../static.files/noscript-893ab5e7.css"></noscript><link rel="alternate icon" type="image/png" href="../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../static.files/favicon-044be391.svg"></head><body class="rustdoc mod crate"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle" title="show sidebar"></button><a class="logo-container" href="../dev_bestia_cargo_completion/index.html"><img src="https://github.com/automation-tasks-rs/cargo-auto/raw/main/images/logo/logo_cargo_auto.svg" alt=""></a></nav><nav class="sidebar"><div class="sidebar-crate"><a class="logo-container" href="../dev_bestia_cargo_completion/index.html"><img src="https://github.com/automation-tasks-rs/cargo-auto/raw/main/images/logo/logo_cargo_auto.svg" alt="logo"></a><h2><a href="../dev_bestia_cargo_completion/index.html">dev_<wbr>bestia_<wbr>cargo_<wbr>completion</a><span class="version">2025.318.1324</span></h2></div><div class="sidebar-elems"><ul class="block"><li><a id="all-types" href="all.html">All Items</a></li></ul><section id="rustdoc-toc"><h3><a href="#">Sections</a></h3><ul class="block top-toc"><li><a href="#dev_bestia_cargo_completion" title="dev_bestia_cargo_completion">dev_bestia_cargo_completion</a><ul><li><a href="#try-it" title="Try it">Try it</a></li><li><a href="#bash-auto-completion" title="bash auto completion">bash auto completion</a></li><li><a href="#complete-the-linux-command" title="complete, the Linux command">complete, the Linux command</a></li><li><a href="#development-details" title="Development details">Development details</a></li><li><a href="#releases-changelog" title="Releases changelog">Releases changelog</a></li><li><a href="#todo" title="TODO">TODO</a></li><li><a href="#open-source-and-free-as-a-beer" title="Open-source and free as a beer">Open-source and free as a beer</a></li></ul></li></ul><h3><a href="#functions">Crate Items</a></h3><ul class="block"><li><a href="#functions" title="Functions">Functions</a></li></ul></section><div id="rustdoc-modnav"></div></div></nav><div class="sidebar-resizer"></div><main><div class="width-limiter"><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="main-heading"><h1>Crate <span>dev_bestia_cargo_completion</span><button id="copy-path" title="Copy item path to clipboard">Copy item path</button></h1><rustdoc-toolbar></rustdoc-toolbar><span class="sub-heading"><a class="src" href="../src/dev_bestia_cargo_completion/main.rs.html#4-144">Source</a> </span></div><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><h2 id="dev_bestia_cargo_completion"><a class="doc-anchor" href="#dev_bestia_cargo_completion">§</a>dev_bestia_cargo_completion</h2>
+<p><strong>Auto-completion for cargo-auto and automation_tasks_rs and partial auto-completion for cargo in bash</strong><br />
+<em><strong>version: 2025.318.1324 date: 2025-03-18 author: <a href="https://bestia.dev">bestia.dev</a> repository: <a href="https://github.com/automation-tasks-rs/dev_bestia_cargo_completion">GitHub</a></strong></em></p>
+<p><img src="https://img.shields.io/badge/maintained-green" alt="maintained" />
+<img src="https://img.shields.io/badge/ready_for_use-green" alt="ready-for-use" />
+<img src="https://img.shields.io/badge/rustlang-orange" alt="rustlang" />
+<img src="https://img.shields.io/badge/automation-orange" alt="automation" />
+<img src="https://img.shields.io/badge/workflow-orange" alt="workflow" /></p>
+<p><img src="https://raw.githubusercontent.com/automation-tasks-rs/cargo-auto/main/images/logo/logo_cargo_auto.svg" alt="logo" />
+dev_bestia_cargo_completion is part of the <a href="https://github.com/automation-tasks-rs">automation_tasks_rs</a> project</p>
+<p><a href="https://crates.io/crates/dev_bestia_cargo_completion"><img src="https://img.shields.io/crates/v/dev_bestia_cargo_completion.svg" alt="crates.io" /></a>
+<a href="https://docs.rs/dev_bestia_cargo_completion/"><img src="https://docs.rs/dev_bestia_cargo_completion/badge.svg" alt="Documentation" /></a>
+<a href="https://web.crev.dev/rust-reviews/crate/dev_bestia_cargo_completion/"><img src="https://web.crev.dev/rust-reviews/badge/crev_count/dev_bestia_cargo_completion.svg" alt="crev reviews" /></a>
+<a href="https://lib.rs/crates/dev_bestia_cargo_completion/"><img src="https://img.shields.io/badge/Lib.rs-rust-orange.svg" alt="Lib.rs" /></a><br />
+<a href="https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License" /></a>
+<a href="https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/"><img src="https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/workflows/rust_fmt_auto_build_test/badge.svg" alt="Rust" /></a>
+<a href="https://automation-tasks-rs.github.io/dev_bestia_cargo_completion/dev_bestia_cargo_completion/index.html"><img src="https://img.shields.io/badge/newest_docs-blue.svg" alt="Newest docs" /></a>
+<img src="https://bestia.dev/webpage_hit_counter/get_svg_image/710310517.svg" alt="dev_bestia_cargo_completion" /></p>
+<p><a href="https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/"><img src="https://img.shields.io/badge/Lines_in_Rust-71-green.svg" alt="Lines in Rust code" /></a>
+<a href="https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/"><img src="https://img.shields.io/badge/Lines_in_Doc_comments-222-blue.svg" alt="Lines in Doc comments" /></a>
+<a href="https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/"><img src="https://img.shields.io/badge/Lines_in_comments-20-purple.svg" alt="Lines in Comments" /></a>
+<a href="https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/"><img src="https://img.shields.io/badge/Lines_in_examples-0-yellow.svg" alt="Lines in examples" /></a>
+<a href="https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/"><img src="https://img.shields.io/badge/Lines_in_tests-0-orange.svg" alt="Lines in tests" /></a></p>
+<p>Hashtags: #maintained #ready-for-use #rustlang #automation #workflow<br />
+My projects on GitHub are more like a tutorial than a finished product: <a href="https://github.com/bestia-dev/tutorials_rust_wasm">bestia-dev tutorials</a>.<br />
+I recommend using the <a href="https://github.com/CRUSTDE-ContainerizedRustDevEnv/crustde_cnt_img_pod">CRUSTDE - Containerized Rust Development Environment</a> to write Rust projects on Linux, isolated from your system.</p>
+<h3 id="try-it"><a class="doc-anchor" href="#try-it">§</a>Try it</h3>
+<p>Install the binary:</p>
+<div class="example-wrap"><pre class="language-bash"><code>cargo install dev_bestia_cargo_completion</code></pre></div>
+<p>Save definition for auto_completion in bash:</p>
+<div class="example-wrap"><pre class="language-bash"><code>complete -C &quot;dev_bestia_cargo_completion&quot; cargo</code></pre></div>
+<p>Start typing <code>cargo b</code> and press <code>tab</code>.<br />
+It should auto-complete to <code>cargo build</code>.<br />
+Congratulation! You just used auto-completion :-)</p>
+<h3 id="bash-auto-completion"><a class="doc-anchor" href="#bash-auto-completion">§</a>bash auto completion</h3>
+<p>Auto-completion in Debian bash is a great tool. You type the first letters, press tab and the word is auto-completed.<br />
+Bash can call an executable binary to return the available words. So it can be written in Rust. This can produce even better results as known as <code>dynamic auto-completion</code>.<br />
+For my knowledge <code>cargo</code> does not have auto-completion yet. There are many plans. It can take some time.<br />
+I will build what I need now. Something simple. It doesn’t need to be perfect.<br />
+This is a great blog:<br />
+<a href="https://www.joshmcguigan.com/blog/shell-completions-pure-rust/">https://www.joshmcguigan.com/blog/shell-completions-pure-rust/</a></p>
+<h3 id="complete-the-linux-command"><a class="doc-anchor" href="#complete-the-linux-command">§</a>complete, the Linux command</h3>
+<p>The Linux command <code>complete</code> adds auto_completion definitions to bash.<br />
+But it is only for the current session. If you want to make it persistent add it to the <code>~/.bashrc</code> file.</p>
+<div class="example-wrap"><pre class="language-bash"><code># list the definitions
 complete
 # delete a definition
 complete -r cargo
 # define a binary to auto-complete the command
-complete -C "binary" command
+complete -C &quot;binary&quot; command
 # for example
-complete -C "dev_bestia_cargo_completion" cargo
-</code></pre>
-            </div>
-            <h3 id="development-details"><a class="doc-anchor" href="#development-details">§</a>Development details</h3>
-            <p>Read the development details in a separate md file:<br>
-            <a href="https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/blob/main/DEVELOPMENT.md">DEVELOPMENT.md</a></p>
-            <h3 id="releases-changelog"><a class="doc-anchor" href="#releases-changelog">§</a>Releases changelog</h3>
-            <p>Read the changelog in a separate md file:<br>
-            <a href="https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/blob/main/RELEASES.md">RELEASES.md</a></p>
-            <h3 id="todo"><a class="doc-anchor" href="#todo">§</a>TODO</h3>
-            <p>Nothing big in the near future.</p>
-            <h3 id="open-source-and-free-as-a-beer"><a class="doc-anchor" href="#open-source-and-free-as-a-beer">§</a>Open-source and free as a beer</h3>
-            <p>My open-source projects are free as a beer (MIT license).<br>
-            I just love programming.<br>
-            But I need also to drink. If you find my projects and tutorials helpful, please buy me a beer by donating to my <a href=
-            "https://paypal.me/LucianoBestia">PayPal</a>.<br>
-            You know the price of a beer in your local bar ;-)<br>
-            So I can drink a free beer for your health :-)<br>
-            <a href="https://translate.google.com/?hl=en&amp;sl=sl&amp;tl=en&amp;text=Na%20zdravje&amp;op=translate">Na zdravje!</a> <a href=
-            "https://dictionary.cambridge.org/dictionary/italian-english/alla-salute">Alla salute!</a> <a href=
-            "https://dictionary.cambridge.org/dictionary/german-english/prost">Prost!</a> <a href=
-            "https://matadornetwork.com/nights/how-to-say-cheers-in-50-languages/">Nazdravlje!</a> 🍻</p>
-            <p><a href="https://bestia.dev">//bestia.dev</a><br>
-            <a href="https://github.com/bestia-dev">//github.com/bestia-dev</a><br>
-            <a href="https://bestiadev.substack.com">//bestiadev.substack.com</a><br>
-            <a href="https://youtube.com/@bestia-dev-tutorials">//youtube.com/@bestia-dev-tutorials</a></p>
-          </div>
-        </details>
-        <h2 id="functions" class="section-header">Functions<a href="#functions" class="anchor">§</a></h2>
-        <ul class="item-table">
-          <li>
-            <div class="item-name">
-              <a class="fn" href="fn.main.html" title="fn dev_bestia_cargo_completion::main">main</a><span title="Restricted Visibility">&nbsp;🔒</span>
-            </div>
-          </li>
-        </ul>
-      </section>
-    </div>
-  </main>
-</body>
-</html>
+complete -C &quot;dev_bestia_cargo_completion&quot; cargo</code></pre></div><h3 id="development-details"><a class="doc-anchor" href="#development-details">§</a>Development details</h3>
+<p>Read the development details in a separate md file:<br />
+<a href="https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/blob/main/DEVELOPMENT.md">DEVELOPMENT.md</a></p>
+<h3 id="releases-changelog"><a class="doc-anchor" href="#releases-changelog">§</a>Releases changelog</h3>
+<p>Read the changelog in a separate md file:<br />
+<a href="https://github.com/automation-tasks-rs/dev_bestia_cargo_completion/blob/main/RELEASES.md">RELEASES.md</a></p>
+<h3 id="todo"><a class="doc-anchor" href="#todo">§</a>TODO</h3>
+<p>Nothing big in the near future.</p>
+<h3 id="open-source-and-free-as-a-beer"><a class="doc-anchor" href="#open-source-and-free-as-a-beer">§</a>Open-source and free as a beer</h3>
+<p>My open-source projects are free as a beer (MIT license).<br />
+I just love programming.<br />
+But I need also to drink. If you find my projects and tutorials helpful, please buy me a beer by donating to my <a href="https://paypal.me/LucianoBestia">PayPal</a>.<br />
+You know the price of a beer in your local bar ;-)<br />
+So I can drink a free beer for your health :-)<br />
+<a href="https://translate.google.com/?hl=en&amp;sl=sl&amp;tl=en&amp;text=Na%20zdravje&amp;op=translate">Na zdravje!</a> <a href="https://dictionary.cambridge.org/dictionary/italian-english/alla-salute">Alla salute!</a> <a href="https://dictionary.cambridge.org/dictionary/german-english/prost">Prost!</a> <a href="https://matadornetwork.com/nights/how-to-say-cheers-in-50-languages/">Nazdravlje!</a> 🍻</p>
+<p><a href="https://bestia.dev">//bestia.dev</a><br />
+<a href="https://github.com/bestia-dev">//github.com/bestia-dev</a><br />
+<a href="https://bestiadev.substack.com">//bestiadev.substack.com</a><br />
+<a href="https://youtube.com/@bestia-dev-tutorials">//youtube.com/@bestia-dev-tutorials</a></p>
+</div></details><h2 id="functions" class="section-header">Functions<a href="#functions" class="anchor">§</a></h2><ul class="item-table"><li><div class="item-name"><a class="fn" href="fn.main.html" title="fn dev_bestia_cargo_completion::main">main</a><span title="Restricted Visibility">&nbsp;🔒</span> </div></li></ul></section></div></main></body></html>

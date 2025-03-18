@@ -1,68 +1,164 @@
 ./docs/help.html
 Document: "2" is not a file!
 
-line 1 column 2097 - Warning: trimming empty <button>
-line 2 column 81 - Warning: trimming empty <span>
-./docs/dev_bestia_cargo_completion/all.html
-Document: "2" is not a file!
+line 1 column 2336 - Error: <rustdoc-search> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 2336 - Warning: discarding unexpected <rustdoc-search>
+line 1 column 2352 - Warning: discarding unexpected </rustdoc-search>
+line 1 column 1694 - Warning: trimming empty <button>
+This document has errors that must be fixed before
+using HTML Tidy to generate a tidied up version.
 
-line 1 column 2145 - Warning: trimming empty <button>
-line 2 column 81 - Warning: trimming empty <span>
-./docs/dev_bestia_cargo_completion/fn.main.html
-Document: "2" is not a file!
-
-line 1 column 2246 - Warning: trimming empty <button>
-line 2 column 81 - Warning: trimming empty <span>
-./docs/dev_bestia_cargo_completion/index.html
-Document: "2" is not a file!
-
-line 1 column 2188 - Warning: trimming empty <button>
-line 3 column 81 - Warning: trimming empty <span>
-./docs/src/dev_bestia_cargo_completion/main.rs.html
-Document: "2" is not a file!
-
-line 3 column 54 - Warning: trimming empty <span>
-./docs/src/dev_bestia_cargo_completion_lib/lib.rs.html
-Document: "2" is not a file!
-
-line 3 column 54 - Warning: trimming empty <span>
-./docs/dev_bestia_cargo_completion_lib/all.html
-Document: "2" is not a file!
-
-line 1 column 2149 - Warning: trimming empty <button>
-line 2 column 81 - Warning: trimming empty <span>
-./docs/dev_bestia_cargo_completion_lib/fn.complete_automation.html
-Document: "2" is not a file!
-
-line 1 column 2376 - Warning: trimming empty <button>
-line 2 column 81 - Warning: trimming empty <span>
-./docs/dev_bestia_cargo_completion_lib/fn.complete_cargo_build_partial.html
-Document: "2" is not a file!
-
-line 1 column 2274 - Warning: trimming empty <button>
-line 2 column 81 - Warning: trimming empty <span>
-./docs/dev_bestia_cargo_completion_lib/fn.complete_cargo_partial.html
-Document: "2" is not a file!
-
-line 1 column 2256 - Warning: trimming empty <button>
-line 2 column 81 - Warning: trimming empty <span>
-./docs/dev_bestia_cargo_completion_lib/index.html
-Document: "2" is not a file!
-
-line 1 column 2196 - Warning: trimming empty <button>
-line 3 column 81 - Warning: trimming empty <span>
-./docs/dev_bestia_cargo_completion_lib/fn.complete_cargo_auto.html
-Document: "2" is not a file!
-
-line 1 column 2376 - Warning: trimming empty <button>
-line 2 column 81 - Warning: trimming empty <span>
 ./docs/settings.html
 Document: "2" is not a file!
 
-line 1 column 2095 - Warning: trimming empty <button>
-line 2 column 81 - Warning: trimming empty <span>
+line 1 column 2338 - Error: <rustdoc-search> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 2338 - Warning: discarding unexpected <rustdoc-search>
+line 1 column 2354 - Warning: discarding unexpected </rustdoc-search>
+line 1 column 1692 - Warning: trimming empty <button>
+This document has errors that must be fixed before
+using HTML Tidy to generate a tidied up version.
+
+./docs/src/dev_bestia_cargo_completion_lib/lib.rs.html
+Document: "2" is not a file!
+
+line 1 column 1968 - Error: <rustdoc-search> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 1968 - Warning: discarding unexpected <rustdoc-search>
+line 1 column 1984 - Warning: discarding unexpected </rustdoc-search>
+line 1 column 2074 - Warning: <div> isn't allowed in <h1> elements
+line 1 column 2131 - Warning: discarding unexpected </div>
+line 1 column 2148 - Error: <rustdoc-toolbar> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 2148 - Warning: discarding unexpected <rustdoc-toolbar>
+line 1 column 2165 - Warning: discarding unexpected </rustdoc-toolbar>
+This document has errors that must be fixed before
+using HTML Tidy to generate a tidied up version.
+
+./docs/src/dev_bestia_cargo_completion/main.rs.html
+Document: "2" is not a file!
+
+line 1 column 1998 - Error: <rustdoc-search> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 1998 - Warning: discarding unexpected <rustdoc-search>
+line 1 column 2014 - Warning: discarding unexpected </rustdoc-search>
+line 1 column 2104 - Warning: <div> isn't allowed in <h1> elements
+line 1 column 2157 - Warning: discarding unexpected </div>
+line 1 column 2175 - Error: <rustdoc-toolbar> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 2175 - Warning: discarding unexpected <rustdoc-toolbar>
+line 1 column 2192 - Warning: discarding unexpected </rustdoc-toolbar>
+This document has errors that must be fixed before
+using HTML Tidy to generate a tidied up version.
+
+./docs/dev_bestia_cargo_completion_lib/fn.complete_cargo_build_partial.html
+Document: "2" is not a file!
+
+line 1 column 2680 - Error: <rustdoc-search> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 2680 - Warning: discarding unexpected <rustdoc-search>
+line 1 column 2696 - Warning: discarding unexpected </rustdoc-search>
+line 1 column 3031 - Error: <rustdoc-toolbar> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 3031 - Warning: discarding unexpected <rustdoc-toolbar>
+line 1 column 3048 - Warning: discarding unexpected </rustdoc-toolbar>
+line 1 column 1866 - Warning: trimming empty <button>
+This document has errors that must be fixed before
+using HTML Tidy to generate a tidied up version.
+
+./docs/dev_bestia_cargo_completion_lib/fn.complete_automation.html
+Document: "2" is not a file!
+
+line 1 column 2782 - Error: <rustdoc-search> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 2782 - Warning: discarding unexpected <rustdoc-search>
+line 1 column 2798 - Warning: discarding unexpected </rustdoc-search>
+line 1 column 3124 - Error: <rustdoc-toolbar> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 3124 - Warning: discarding unexpected <rustdoc-toolbar>
+line 1 column 3141 - Warning: discarding unexpected </rustdoc-toolbar>
+line 1 column 1968 - Warning: trimming empty <button>
+This document has errors that must be fixed before
+using HTML Tidy to generate a tidied up version.
+
+./docs/dev_bestia_cargo_completion_lib/fn.complete_cargo_partial.html
+Document: "2" is not a file!
+
+line 1 column 2662 - Error: <rustdoc-search> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 2662 - Warning: discarding unexpected <rustdoc-search>
+line 1 column 2678 - Warning: discarding unexpected </rustdoc-search>
+line 1 column 3007 - Error: <rustdoc-toolbar> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 3007 - Warning: discarding unexpected <rustdoc-toolbar>
+line 1 column 3024 - Warning: discarding unexpected </rustdoc-toolbar>
+line 1 column 1848 - Warning: trimming empty <button>
+This document has errors that must be fixed before
+using HTML Tidy to generate a tidied up version.
+
+./docs/dev_bestia_cargo_completion_lib/all.html
+Document: "2" is not a file!
+
+line 1 column 2720 - Error: <rustdoc-search> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 2720 - Warning: discarding unexpected <rustdoc-search>
+line 1 column 2736 - Warning: discarding unexpected </rustdoc-search>
+line 1 column 1741 - Warning: trimming empty <button>
+This document has errors that must be fixed before
+using HTML Tidy to generate a tidied up version.
+
+./docs/dev_bestia_cargo_completion_lib/fn.complete_cargo_auto.html
+Document: "2" is not a file!
+
+line 1 column 2782 - Error: <rustdoc-search> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 2782 - Warning: discarding unexpected <rustdoc-search>
+line 1 column 2798 - Warning: discarding unexpected </rustdoc-search>
+line 1 column 3124 - Error: <rustdoc-toolbar> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 3124 - Warning: discarding unexpected <rustdoc-toolbar>
+line 1 column 3141 - Warning: discarding unexpected </rustdoc-toolbar>
+line 1 column 1968 - Warning: trimming empty <button>
+This document has errors that must be fixed before
+using HTML Tidy to generate a tidied up version.
+
+./docs/dev_bestia_cargo_completion_lib/index.html
+Document: "2" is not a file!
+
+line 1 column 3643 - Error: <rustdoc-search> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 3643 - Warning: discarding unexpected <rustdoc-search>
+line 1 column 3659 - Warning: discarding unexpected </rustdoc-search>
+line 1 column 3886 - Error: <rustdoc-toolbar> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 3886 - Warning: discarding unexpected <rustdoc-toolbar>
+line 1 column 3903 - Warning: discarding unexpected </rustdoc-toolbar>
+line 1 column 1788 - Warning: trimming empty <button>
+This document has errors that must be fixed before
+using HTML Tidy to generate a tidied up version.
+
 ./docs/index.html
 Document: "2" is not a file!
 
 line 1 column 1 - Warning: missing <!DOCTYPE> declaration
 line 1 column 1 - Warning: inserting missing 'title' element
+./docs/dev_bestia_cargo_completion/fn.main.html
+Document: "2" is not a file!
+
+line 1 column 2631 - Error: <rustdoc-search> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 2631 - Warning: discarding unexpected <rustdoc-search>
+line 1 column 2647 - Warning: discarding unexpected </rustdoc-search>
+line 1 column 2954 - Error: <rustdoc-toolbar> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 2954 - Warning: discarding unexpected <rustdoc-toolbar>
+line 1 column 2971 - Warning: discarding unexpected </rustdoc-toolbar>
+line 1 column 1838 - Warning: trimming empty <button>
+This document has errors that must be fixed before
+using HTML Tidy to generate a tidied up version.
+
+./docs/dev_bestia_cargo_completion/all.html
+Document: "2" is not a file!
+
+line 1 column 2695 - Error: <rustdoc-search> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 2695 - Warning: discarding unexpected <rustdoc-search>
+line 1 column 2711 - Warning: discarding unexpected </rustdoc-search>
+line 1 column 1737 - Warning: trimming empty <button>
+This document has errors that must be fixed before
+using HTML Tidy to generate a tidied up version.
+
+./docs/dev_bestia_cargo_completion/index.html
+Document: "2" is not a file!
+
+line 1 column 3614 - Error: <rustdoc-search> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 3614 - Warning: discarding unexpected <rustdoc-search>
+line 1 column 3630 - Warning: discarding unexpected </rustdoc-search>
+line 1 column 3853 - Error: <rustdoc-toolbar> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 3853 - Warning: discarding unexpected <rustdoc-toolbar>
+line 1 column 3870 - Warning: discarding unexpected </rustdoc-toolbar>
+line 1 column 1780 - Warning: trimming empty <button>
+This document has errors that must be fixed before
+using HTML Tidy to generate a tidied up version.
+

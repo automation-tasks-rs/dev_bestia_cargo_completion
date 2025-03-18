@@ -1,0 +1,1 @@
+searchState.loadedDescShard("dev_bestia_cargo_completion_lib", 0, "dev_bestia_cargo_completion\nwords after <code>cargo auto</code> execute the appropriate binary, …\nwords after <code>cargo auto</code> execute the appropriate binary, …\npartial completion of the cargo build command first word …\npartial completion of the cargo command first word after …")

@@ -1,0 +1,1 @@
+searchState.loadedDescShard("dev_bestia_cargo_completion", 0, "dev_bestia_cargo_completion")
