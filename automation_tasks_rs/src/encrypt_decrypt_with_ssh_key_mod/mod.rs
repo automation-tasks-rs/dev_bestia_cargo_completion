@@ -118,6 +118,7 @@ pub(crate) fn decode64_from_string_to_string(string_to_decode: &str) -> anyhow::
 ///
 /// First it tries to use the ssh-agent.  
 /// Else it uses the private key and ask the user to input the passphrase.  
+/// If the passphrase is 'empty string' it will try ssh-agent one more time.
 /// The secret signed seed will be the actual password for symmetrical encryption.  
 /// Returns secret_password_bytes.  
 pub(crate) fn sign_seed_with_ssh_agent_or_private_key_file(tilde_private_key_file_path: &str, plain_seed_bytes_32bytes: [u8; 32]) -> anyhow::Result<SecretBox<[u8; 32]>> {
@@ -136,7 +137,16 @@ pub(crate) fn sign_seed_with_ssh_agent_or_private_key_file(tilde_private_key_fil
         println!("{GREEN}ssh-add -t 1h {tilde_private_key_file_path}{RESET}");
         println!("  {YELLOW}Unlock the private key to decrypt the saved file.{RESET}");
 
-        sign_seed_with_private_key_file(plain_seed_bytes_32bytes, &private_key_file_path)?
+        match sign_seed_with_private_key_file(plain_seed_bytes_32bytes, &private_key_file_path){
+            Ok(secret_passcode_32bytes) => secret_passcode_32bytes,
+            Err(err)=>{
+                if err.to_string() == "Passphrase empty"{
+                    // try with ssh-agent, because maybe the developer has ssh-add in another terminal right now
+                    return Ok(sign_seed_with_ssh_agent(plain_seed_bytes_32bytes, &private_key_file_path)?);
+                }
+                anyhow::bail!(err)
+            }
+        }
     };
     Ok(secret_passcode_32bytes)
 }
@@ -195,7 +205,9 @@ fn sign_seed_with_private_key_file(plain_seed_bytes_32bytes: [u8; 32], private_k
         println!("{BLUE}Enter the passphrase for the SSH private key:{RESET}");
 
         let secret_passphrase = SecretString::from(crate::cl::inquire::Password::new("").without_confirmation().with_display_mode(crate::cl::inquire::PasswordDisplayMode::Masked).prompt()?);
-
+        if secret_passphrase.expose_secret().is_empty(){
+            anyhow::bail!("Passphrase empty");
+        }
         Ok(secret_passphrase)
     }
     // the user is the only one that knows the passphrase to unlock the private key

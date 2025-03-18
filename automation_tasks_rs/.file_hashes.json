@@ -6,7 +6,7 @@
     },
     {
       "filename": "automation_tasks_rs/target/debug/automation_tasks_rs",
-      "filehash": "7b2ec72690f1e4058d916335b8fda66b44dd39f587e7bf610f65752e7af1babe"
+      "filehash": "b0b44e0f36aae710f1bfba5dd476be577906454387a4dd7e8210623c53eedfe5"
     },
     {
       "filename": "automation_tasks_rs/src/encrypt_decrypt_with_ssh_key_mod/crates_io_api_token_mod.rs",
@@ -18,7 +18,7 @@
     },
     {
       "filename": "automation_tasks_rs/src/encrypt_decrypt_with_ssh_key_mod/mod.rs",
-      "filehash": "073cac1630621331eaf823f4c707df1dfc96ec063e02570a8a90fe820c028700"
+      "filehash": "668b977db3357273041d62b965373905579595b66f84f2a0c2a0730d101258cf"
     },
     {
       "filename": "automation_tasks_rs/src/cargo_auto_github_api_mod.rs",
