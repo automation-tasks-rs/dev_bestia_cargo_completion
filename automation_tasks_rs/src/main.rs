@@ -163,7 +163,7 @@ fn print_help() {
   {YELLOW}Then you can type the passphrase of the private key every time. This is pretty secure.{RESET}
   {YELLOW}Somewhat less secure (but more comfortable) way is to store the private key in ssh-agent.{RESET}
 
-  {YELLOW}© 2025 bestia.dev  MIT License github.com/automation-tasks-rs/cargo-auto{RESET}
+  {YELLOW}© 2025 bestia.dev  MIT License github.com/automation--tasks--rs/cargo-auto{RESET}
 "#
     );
     print_examples_cmd();
@@ -444,8 +444,6 @@ fn task_github_new_release() {
             .unwrap_or_else(|e| panic!("{e}"));
         println!(r#"  {YELLOW}Asset uploaded. Open and edit the description on GitHub Releases in the browser.{RESET}"#);
     }
-
-
     // endregion: upload asset only for executables, not for libraries
 
     println!(r#"{GREEN}https://github.com/{github_owner}/{repo_name}/releases{RESET} "#);
