@@ -2,31 +2,47 @@
   "vec_file_metadata": [
     {
       "filename": "automation_tasks_rs/Cargo.toml",
-      "filehash": "a63285d5ce822937acdfb4572bac6e5ba10c3dfee8f95a58560dc92419edacad"
+      "filehash": "4d947aed336324a5be02e4d20ebeb29e6f429b9f61998723566f9d505adf3403"
     },
     {
       "filename": "automation_tasks_rs/target/debug/automation_tasks_rs",
-      "filehash": "b0b44e0f36aae710f1bfba5dd476be577906454387a4dd7e8210623c53eedfe5"
+      "filehash": "8a41853d33ca61ed34dc274511fe2366a407e7ee2cb44d283f2a3049d3a9a803"
     },
     {
       "filename": "automation_tasks_rs/src/encrypt_decrypt_with_ssh_key_mod/crates_io_api_token_mod.rs",
-      "filehash": "7706966d3bc2d07eb34de961ee51e2a334e7c16a23b4c055b4faf873e080da02"
+      "filehash": "8bd708b3894aae7fa7d4fc048d456b9daba06b1450d0619ec26377132a2ab864"
+    },
+    {
+      "filename": "automation_tasks_rs/src/encrypt_decrypt_with_ssh_key_mod/encrypt_decrypt_mod.rs",
+      "filehash": "128a6582d89a82d49646b1601df00945fddd6acf030d521f5fb2d08cc60980ae"
     },
     {
       "filename": "automation_tasks_rs/src/encrypt_decrypt_with_ssh_key_mod/github_api_token_with_oauth2_mod.rs",
-      "filehash": "3af4ba7f6ea0a1f642e83826bc9ad846d12dae86b0c0dc736ee7e18fc1645b54"
+      "filehash": "7249855ce638c42de1762235ce7725b629edfe2dc2fcdb21681acfd4b8be4fc8"
     },
     {
       "filename": "automation_tasks_rs/src/encrypt_decrypt_with_ssh_key_mod/mod.rs",
-      "filehash": "668b977db3357273041d62b965373905579595b66f84f2a0c2a0730d101258cf"
+      "filehash": "c2c7e98f22184898e8754896820c62060f61eda41ccdf607431e75d38f660876"
     },
     {
       "filename": "automation_tasks_rs/src/cargo_auto_github_api_mod.rs",
-      "filehash": "b2a9d2c96ae51ab3c0f6ee307647f8bf30fc8f704669316be41d6d400fe61f1f"
+      "filehash": "7607f0557bd8c1fa9afebc673e4a7c4585af3596877a8ea2e74388b1d6d56f85"
     },
     {
       "filename": "automation_tasks_rs/src/main.rs",
-      "filehash": "3fbbdd5825207040669a807ba4a2d21cbb4d1842cdfd338c10b67e053d38d5ab"
+      "filehash": "7ba6df5c506bef1ef1b01a7b121ae1f52db023b47b389b1af929b29890fd8c2c"
+    },
+    {
+      "filename": "automation_tasks_rs/src/build_lib_mod.rs",
+      "filehash": "51d66ea389c12ad0cb0e9f7473387fb1599e6e3cf298f8dd3c7dd9486f5fe8e7"
+    },
+    {
+      "filename": "automation_tasks_rs/src/generic_functions_mod.rs",
+      "filehash": "ed55b6e908b24d57f48910a37e66220c0ff9755fab4e7dbae9a9a62438db445c"
+    },
+    {
+      "filename": "automation_tasks_rs/src/build_cli_bin_mod.rs",
+      "filehash": "f20724a5ee69897c9b1786698b7b9cb3b77abaf940fcdd18a28ae37cbc9325c7"
     }
   ]
 }
