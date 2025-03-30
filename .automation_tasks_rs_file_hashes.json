@@ -2,15 +2,15 @@
   "vec_file_metadata": [
     {
       "filename": "Cargo.toml",
-      "filehash": "09cc682586d166150ef1978e9491ef85a16dc3e61b1de01c2c602c683149e3ef"
+      "filehash": "282d1ccf9ae50af4b635577e2efc305885f3e7ee5388cb47b17f798f4f1af766"
     },
     {
       "filename": "src/lib.rs",
-      "filehash": "da1a9f3fcb6362bfa7df8957b70919c80443268cf98203616773847045686f0e"
+      "filehash": "0b2ecf9d459a456fa463bbcc20426935542075a788d15ca2db557af6b93e4d5a"
     },
     {
       "filename": "src/bin/dev_bestia_cargo_completion/main.rs",
-      "filehash": "9a41eccbacee1b4a67f86845bf12f3dfb117d755f65828ebad1200194fd83c1b"
+      "filehash": "b510a1ee2287f58816cecfd7688fd06b16d7d7a4118c4c29439909eea9092054"
     }
   ]
 }
