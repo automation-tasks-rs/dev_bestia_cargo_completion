@@ -1,6 +1,6 @@
 [package]
 name = "dev_bestia_cargo_completion"
-version = "2025.330.1858"
+version = "2025.331.1245"
 authors = ["bestia.dev"]
 homepage = "https://bestia.dev"
 edition = "2021"
