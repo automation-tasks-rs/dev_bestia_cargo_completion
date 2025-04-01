@@ -2,47 +2,51 @@
   "vec_file_metadata": [
     {
       "filename": "automation_tasks_rs/Cargo.toml",
-      "filehash": "4d947aed336324a5be02e4d20ebeb29e6f429b9f61998723566f9d505adf3403"
+      "filehash": "ff9bf170098f2048315c8f78cf3cb0593eb613cd658184b348aa4103d656a9dd"
     },
     {
       "filename": "automation_tasks_rs/target/debug/automation_tasks_rs",
-      "filehash": "e90c4553a96bb52e4a727823493cfb68837d0a9e64ff7419a945403720bf6cde"
+      "filehash": "a06bc95fbfce0c19e40bb76d5e0bd90a3df6a99583de66f681f45d9726305641"
     },
     {
       "filename": "automation_tasks_rs/src/encrypt_decrypt_with_ssh_key_mod/crates_io_api_token_mod.rs",
-      "filehash": "394d81be83ab25ed7049015c2316f4795b10e572cc86c7cc95f062f8a8b2380e"
+      "filehash": "7d3d69ab8ed0dd9fd251008fc391de9415b77b12077990eb0bf2da52439a91ef"
     },
     {
       "filename": "automation_tasks_rs/src/encrypt_decrypt_with_ssh_key_mod/encrypt_decrypt_mod.rs",
-      "filehash": "4ca9e4e152c9d31364accb3d6af897bc719af4bac254c5623850ac9bc685a3c8"
+      "filehash": "c1e7fb44663b5cd9eee8cfd155f7c9d83bafcc542ccaffef1b06ead7f71089d8"
     },
     {
       "filename": "automation_tasks_rs/src/encrypt_decrypt_with_ssh_key_mod/github_api_token_with_oauth2_mod.rs",
-      "filehash": "6690b6c480cd78e84644f0cb18eb465edc74ffc06cb265320a575763f147d51d"
+      "filehash": "d26e30e64a4affe1fa8298eb57c357cfeae924edb9750281a576a0ad8e881979"
     },
     {
       "filename": "automation_tasks_rs/src/encrypt_decrypt_with_ssh_key_mod/mod.rs",
       "filehash": "c2c7e98f22184898e8754896820c62060f61eda41ccdf607431e75d38f660876"
     },
     {
+      "filename": "automation_tasks_rs/src/tasks_mod.rs",
+      "filehash": "89a9ba6bfd8a77f0dfdad132fa5ae27503e56823c2a9eccab1fe60837213e9a0"
+    },
+    {
       "filename": "automation_tasks_rs/src/cargo_auto_github_api_mod.rs",
-      "filehash": "7607f0557bd8c1fa9afebc673e4a7c4585af3596877a8ea2e74388b1d6d56f85"
+      "filehash": "bad82924fc5fcb73dcc5429c060cf6aa2fe33cc74c48216c566351b5b5ab0d01"
     },
     {
       "filename": "automation_tasks_rs/src/main.rs",
-      "filehash": "47026ed99286ce9d0f20be7ab0a8f7e9323ac247a2bf6594f7d40f4ea54b34f6"
+      "filehash": "c44877ce4fc538dda50ce5646dcba370a82c8c5637f631f4279d1bf26b7abecd"
     },
     {
       "filename": "automation_tasks_rs/src/build_lib_mod.rs",
-      "filehash": "51d66ea389c12ad0cb0e9f7473387fb1599e6e3cf298f8dd3c7dd9486f5fe8e7"
+      "filehash": "8c37049ac0150588cc1fad8d08761bbd9cb2f1b47f339bbe7f107d8f68c52b9d"
     },
     {
       "filename": "automation_tasks_rs/src/generic_functions_mod.rs",
-      "filehash": "e865cbf364c33607ecd81a14ff3513da5cd5e4ec84101482cc744338448a3189"
+      "filehash": "b4257c12647ca80d59eb9903d1574465647b8b2639d7e27e6312d6a82ff606e6"
     },
     {
       "filename": "automation_tasks_rs/src/build_cli_bin_mod.rs",
-      "filehash": "f20724a5ee69897c9b1786698b7b9cb3b77abaf940fcdd18a28ae37cbc9325c7"
+      "filehash": "82f7f16eb7ad551ed5de92bbe3d231a7eabfa2c6cc9f716cc28f1b07e2b9435c"
     }
   ]
 }
